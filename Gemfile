@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'calendar_helper', '~> 0.2.6' #for displaying calendar
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'

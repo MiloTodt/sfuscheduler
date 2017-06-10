@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+/* selects calendar colour
+  require 'calendar_styles/grey'
+ *   OR
+ *= require 'calendar_styles/red'
+ *   OR
+ *= require 'calendar_styles/blue'
+ */
