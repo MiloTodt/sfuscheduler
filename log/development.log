@@ -37,3 +37,21 @@ Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6
 
 
 Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 15:30:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 260ms (Views: 254.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 15:50:45 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 412ms (Views: 365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 15:56:19 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
