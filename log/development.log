@@ -1,0 +1,39 @@
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 14:21:48 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 61ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-10 14:32:59 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1133ms (Views: 1123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-10 14:33:00 -0700
