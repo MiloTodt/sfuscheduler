@@ -61,6 +61,7 @@ class Day
 end
 monday = Day.new("Monday")
 monday.addCourse("CMPT 276", "1430", "1520")
+monday.addCourse("CMPT 3423", "530", "620")
 monday.printCourses()
 
 week = makeWeek
