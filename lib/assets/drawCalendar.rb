@@ -17,14 +17,14 @@ END_TIMES = {"920" => 0, "1020" => 1, "1120" => 2, "1220"=>3, "1320"=>4,
 #=====================================================================
 # Methods
 #=====================================================================
-def makeWeek(courseList)
+def makeWeek(courseList) #builds an array of Days and adds Courses to each Day
     week = []
     7.times do |x|
         week << Day.new(DAYS[x])
         courseList.each{|course|
         if course.getDays.index(x) != nil then
             week[x].addCourse(course)
-            puts "added #{course.getName()}"
+            puts "added #{course.getName()}" #TODO restict to only the times for that day
         end
         }
     end
@@ -45,7 +45,7 @@ class Course
                 @times << time
             end
         end
-        @@numOfCourses += 1
+        @@numOfCourses += 1 #Each instance of the class shares this variable and it's value, tracks number of courses added
     end
     def getName
         @name
@@ -137,14 +137,3 @@ course1 = Course.new("CMPT 391", [[0, "830", "1020"],  [4, "830", "920"]])
 course2 = Course.new("MACM 222", [1, "130", "320"])
 monday.addCourse(course1)
 monday.addCourse(course2)
-
-
-
-
-
-
-week = makeWeek()
-added = [false]
-schedule = []
-tmp = []
-
