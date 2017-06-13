@@ -1,4 +1,4 @@
-# drawCakebdar.rb
+# drawCalendar.rb
 
 
 #=====================================================================
@@ -22,9 +22,9 @@ def makeWeek(courseList) #builds an array of Days and adds Courses to each Day
     7.times do |x|
         week << Day.new(DAYS[x])
         courseList.each{|course|
-        if course.getDays.index(x) != nil then
-            week[x].addCourse(course)
-            puts "added #{course.getName()}" #TODO restict to only the times for that day
+        if course.getDays.index(x) != nil then #course is on this day
+            course.getTimes().each{|time| if time[0] == x then week[x].addCourse(Course.new(course.getName, time)) end } #adds the course block to this day
+            puts "added #{course.getName()}" 
         end
         }
     end
@@ -33,10 +33,9 @@ end
 
 
 #=====================================================================
-# classes
+# Classes
 #=====================================================================
 class Course
-    @@numOfCourses = 0
     def initialize(name, times) #times is an array of course times
         @times = [] # ["Monday", "1230", "1330"] day, start, end
         @name = name
@@ -45,7 +44,6 @@ class Course
                 @times << time
             end
         end
-        @@numOfCourses += 1 #Each instance of the class shares this variable and it's value, tracks number of courses added
     end
     def getName
         @name
@@ -126,14 +124,8 @@ allCourses.each{|course| puts course.getTimes}
 
 
 monday = Day.new("Monday")
-monday.addCourse("CMPT 276", "1430", "1520")
-monday.addCourse("CMPT 3423", "530", "620")
-monday.printCourses()
-
-
-
-
 course1 = Course.new("CMPT 391", [[0, "830", "1020"],  [4, "830", "920"]])
 course2 = Course.new("MACM 222", [1, "130", "320"])
 monday.addCourse(course1)
 monday.addCourse(course2)
+monday.printCourses()
