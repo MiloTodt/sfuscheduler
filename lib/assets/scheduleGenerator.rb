@@ -19,6 +19,7 @@
 # ["Course_1", "Course_2"], ["Course_1", "Course_3"], 
 # ["Course_4", "Course_2"], ["Course_4", "Course_3"], 
 # ]
+# separate unit send out one schedule at a time will be done in integration module
 
 
 #=====================================================================
@@ -153,21 +154,26 @@ end
 #=================================================================
 class Course
 	# dates = [[day_1, start, end],...[day_n, start, end]]
-	def initialize(name, id, location, dates) 
+	def initialize(name, priority, dates, requisites) 
 		@name = name
-		@id = id
-		@location = location
+		@priority = priority
 		@dates = []
 		@conflicts = []
+		@requisites = []
 		if dates.length > 0
 			dates.each do |date|
 				@dates << date
 			end
 		end
+		if requisites.length > 0
+			requisites.each do |requisite|
+				@requisites << requisite
+			end
+		end
 	end
 
 	def ==(course)
-		if @name == course.getName and @id == course.getId
+		if @name == course.getName 
 			return true
 		end
 		return false
@@ -177,8 +183,8 @@ class Course
 		@name
 	end
 
-	def getId
-		@id
+	def getPriority
+		@priority
 	end
 
 	def getDates
@@ -188,11 +194,8 @@ class Course
 	def getConflicts
 		@conflicts
 	end 
-	
-	def getLocation
-		@location
-	end
 
+	# check if course is in @conflicts
 	def inConflict(course)
 		@conflicts.each do |conflict|
 			if conflict == course
@@ -205,6 +208,7 @@ class Course
 		return false
 	end
 
+	# check if self has conflicts with course
 	def checkConflict(course)
 		check = Week.new()
 		check.addCourse(self)
@@ -246,12 +250,12 @@ class Scheduler
 			courses.each do |course|
 				@courses.push(Course.new(course[0], course[1], course[2], course[3]))
 			end
-			self.compareConflicts
+			self.compareTimeConflicts
 			self.generateSchedules
 		end
 	end
 
-	def compareConflicts()
+	def compareTimeConflicts()
 		@courses.each do |checking|
 			@courses.each do |check_with|
 				checking.checkConflict(check_with)
@@ -261,6 +265,7 @@ class Scheduler
 	
 	def generateSchedules
 		self.checkTimeConflicts()
+		self.checkLocationConflicts()
 	end
 
 	def checkTimeConflicts
@@ -303,7 +308,10 @@ class Scheduler
 		end
 	end
 
-	
+	def checkLocationConflicts()
+	end
+
+
 
 	def wrapper(schedules)
 		ret = []
