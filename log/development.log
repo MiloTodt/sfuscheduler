@@ -55,3 +55,236 @@ Started GET "/" for 127.0.0.1 at 2017-06-10 15:56:19 -0700
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-13 21:29:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 348ms (Views: 325.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:29:01 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-13 21:30:51 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 170ms (Views: 163.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-13 21:35:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (48.0ms)
+  Rendered welcome/index.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 463ms (Views: 455.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+Processing by WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (5.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (5.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (2.3ms)
+  Rendered welcome/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 191ms (Views: 185.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:36:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-13 21:37:21 -0700
+Processing by WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (5.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (5.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (11.9ms)
+  Rendered welcome/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 189ms (Views: 182.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-09-06" for 127.0.0.1 at 2017-06-13 21:37:35 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-09-06"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (15.9ms)
+  Rendered welcome/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 72ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-09-05" for 127.0.0.1 at 2017-06-13 21:37:37 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-09-05"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (7.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (19.1ms)
+  Rendered welcome/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 89ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-09-04" for 127.0.0.1 at 2017-06-13 21:37:38 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-09-04"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (5.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (10.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (25.4ms)
+  Rendered welcome/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-09-03" for 127.0.0.1 at 2017-06-13 21:37:39 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-09-03"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (4.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (8.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (21.7ms)
+  Rendered welcome/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-11-26" for 127.0.0.1 at 2017-06-13 21:37:40 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-11-26"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (17.1ms)
+  Rendered welcome/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2017-11-26" for 127.0.0.1 at 2017-06-13 21:38:16 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2017-11-26"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (6.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (17.3ms)
+  Rendered welcome/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 189ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-02-18" for 127.0.0.1 at 2017-06-13 21:38:24 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-02-18"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (17.1ms)
+  Rendered welcome/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-02-17" for 127.0.0.1 at 2017-06-13 21:38:25 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-02-17"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (9.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (33.0ms)
+  Rendered welcome/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-05-12" for 127.0.0.1 at 2017-06-13 21:38:27 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-05-12"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (5.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (8.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (16.7ms)
+  Rendered welcome/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-08-04" for 127.0.0.1 at 2017-06-13 21:38:28 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-08-04"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (4.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (8.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (17.9ms)
+  Rendered welcome/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-08-03" for 127.0.0.1 at 2017-06-13 21:38:29 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-08-03"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (15.5ms)
+  Rendered welcome/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-08-02" for 127.0.0.1 at 2017-06-13 21:38:29 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-08-02"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (15.8ms)
+  Rendered welcome/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 65ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start_date=2018-08-01" for 127.0.0.1 at 2017-06-13 21:38:30 -0700
+Processing by WelcomeController#index as HTML
+  Parameters: {"start_date"=>"2018-08-01"}
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_week_calendar.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_month_calendar.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (20.6ms)
+  Rendered welcome/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
