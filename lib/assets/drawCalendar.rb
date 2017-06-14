@@ -95,13 +95,13 @@ end
 #=====================================================================
 # WORK IN PROGRESS view anything after this as a sandbox
 #=====================================================================
-# courseList = [
-# 	["CMPT 276", [["M", "1430", "1520"], ["W", "1430", "1520"], ["F", "1430", "1520"]] ],
-# 	["CMPT 295", [["M", "1530", "1620"], ["W", "1530", "1620"], ["F", "1530", "1620"]] ],
-# 	["CMPT 320", [["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"]] ],
-# 	["CMPT 371", [["M", "1430", "1720"], ["F", "930", "1020"]] ],
-# 	["CMPT 391", [["M", "830", "1020"],  ["F", "830", "920"]] ],
-# ]
+courseList1 = [
+	["CMPT 276", [["M", "1430", "1520"], ["W", "1430", "1520"], ["F", "1430", "1520"]] ],
+	["CMPT 295", [["M", "1530", "1620"], ["W", "1530", "1620"], ["F", "1530", "1620"]] ],
+	["CMPT 320", [["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"]] ],
+	["CMPT 371", [["M", "1430", "1720"], ["F", "930", "1020"]] ],
+	["CMPT 391", [["M", "830", "1020"],  ["F", "830", "920"]] ],
+]
 courseList = [
 	["CMPT 276", [[0, "1430", "1520"], [2, "1430", "1520"], [4, "1430", "1520"]] ],
 	["CMPT 295", [[0, "1530", "1620"], [2, "1530", "1620"], [4, "1530", "1620"]] ],
@@ -110,7 +110,7 @@ courseList = [
 	["CMPT 391", [[0, "830", "1020"],  [4, "830", "920"]] ],
 ]
 
-#Wrapper to convert Brain's format to my current one
+#Wrapper to convert Brian's format to my current one
 allCourses = []
 courseList.each{|course|
     allCourses << Course.new(course[0],course[1])
@@ -124,8 +124,29 @@ allCourses.each{|course| puts course.getTimes}
 
 
 monday = Day.new("Monday")
+tuesday = Day.new("Tuesday")
 course1 = Course.new("CMPT 391", [[0, "830", "1020"],  [4, "830", "920"]])
 course2 = Course.new("MACM 222", [1, "130", "320"])
 monday.addCourse(course1)
 monday.addCourse(course2)
 monday.printCourses()
+
+schedule  = Array.new(12){Array.new(7, nil)} #7x12 array, 7 days with 12 timeslots
+
+allCourses.each{|course|  #fills each slot with the course name at that time.
+    course.getTimes.each { |time|
+        START_TIMES[time[1]].upto(END_TIMES[time[2]]){ |x|
+        thisDAy = time[0]
+        schedule[time[0]][x] = course.getName()
+         }
+    }
+
+}
+schedule.each{|day|
+    day.each {|time|
+        if time != nil then 
+        puts time
+        end
+    }
+}   
+
