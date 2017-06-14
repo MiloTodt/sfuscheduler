@@ -288,3 +288,196 @@ Processing by WelcomeController#index as HTML
   Rendered /var/lib/gems/2.3.0/gems/simple_calendar-2.2.5/app/views/simple_calendar/_calendar.html.erb (20.6ms)
   Rendered welcome/index.html.erb within layouts/application (35.3ms)
 Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:43:37 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (6.2ms)
+  Rendered simple_calendar/_month_calendar.html.erb (5.6ms)
+  Rendered simple_calendar/_calendar.html.erb (12.0ms)
+  Rendered welcome/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 182ms (Views: 176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:45:03 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (5.8ms)
+  Rendered simple_calendar/_month_calendar.html.erb (4.9ms)
+  Rendered simple_calendar/_calendar.html.erb (11.7ms)
+  Rendered welcome/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 188ms (Views: 182.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:45:04 -0700
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:45:51 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (5.4ms)
+  Rendered simple_calendar/_month_calendar.html.erb (4.6ms)
+  Rendered simple_calendar/_calendar.html.erb (10.5ms)
+  Rendered welcome/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 178ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:46:21 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (5.4ms)
+  Rendered simple_calendar/_month_calendar.html.erb (4.7ms)
+  Rendered simple_calendar/_calendar.html.erb (10.4ms)
+  Rendered welcome/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 179ms (Views: 173.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (2.3ms)
+  Rendered simple_calendar/_month_calendar.html.erb (4.1ms)
+  Rendered simple_calendar/_calendar.html.erb (10.6ms)
+  Rendered welcome/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:29 -0700
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_week_calendar.html.erb (2.8ms)
+  Rendered simple_calendar/_month_calendar.html.erb (6.3ms)
+  Rendered simple_calendar/_calendar.html.erb (20.5ms)
+  Rendered welcome/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 89ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:46:32 -0700
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+Processing by WelcomeController#index as HTML
+  Rendered simple_calendar/_calendar.html.erb (10.8ms)
+  Rendered welcome/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/calendarmt.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/application.self-3d5489278b097a9182a839476e6025e1d7ac0a9f46497d293fcaf99b648f7837.css?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/calendar_styles/red.self-d362ed19322c50dd4daca2e921023e01c96c72f6c976198523ff4441578a78ea.css?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/calendar_styles/blue.self-4f6d2b53bc869aef4f0458ef29b50d2d84c0a6ed29bce2d13d0bf1750d435b34.css?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/turbolinks.self-6d31c9800156926aa02076f914b9e3c031e14c4c2bff50ee018c18f77fbedfc1.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/calendarmt.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-06-13 21:47:01 -0700

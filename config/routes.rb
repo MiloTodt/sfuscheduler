@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :classtimes
   get 'welcome/index'
   resources :calendarmt #controller for displaying calendar
   root 'welcome#index' #This makes welcome/index the default landing page -Milo

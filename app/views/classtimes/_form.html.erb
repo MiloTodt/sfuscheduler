@@ -1,0 +1,25 @@
+<%= form_for(@classtime) do |f| %>
+  <% if @classtime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@classtime.errors.count, "error") %> prohibited this classtime from being saved:</h2>
+
+      <ul>
+      <% @classtime.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
