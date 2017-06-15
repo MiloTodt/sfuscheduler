@@ -376,35 +376,17 @@ class Scheduler
 		return ret
 	end
 
-	# Sort from highest priority to lowest
-	def priorityWrapper(schedules)
-		ret = []
-		schedules.each do |schedule|
-			tmp = schedule[1]
-			tmp2 = []
-			tmp3 = []
-			tmp2 << schedule[0]
-			schedule[1].each do |course|
-				tmp3 << course.getName
-			end
-			tmp2 << tmp3
-			ret << tmp2
-		end
-		return ret
-	end
-
 	def getCourses
 		@courses
 	end
 
-	def getSchedule(num)
-		self.wrapper(@courseTable[num])
+	def getSchedule(num_courses, num_schedules, prioritized)
+		if prioritized
+			@courseTable[num_courses].sort!{|a, b| a[0] <=>b[0]}.reverse!
+		end
+		ret = self.wrapper(@courseTable[num_courses])
+		ret = ret[0...num_schedules]
 	end
-
-	def getPrioritySchedule(num)
-		self.priorityWrapper(@courseTable[num])
-	end		
-
 
 # debug purposes
 	def printConflicts
