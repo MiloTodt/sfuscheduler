@@ -11,7 +11,10 @@ priority_number = 0
 # use this example
 # array of courses
 # courses include
-# ["course name", priority_number, [[day, start_time, end_time, location],[day, start_time, end_time, location],[day, start_time, end_time, location] ]]
+# ["course name", priority_number, 
+# [[day, start_time, end_time, location],[day, start_time, end_time, location],[day, start_time, end_time, location]], 
+# [["pre-requisites", "course_1"], ["co-requisites", "course_2"]] 
+# ]
 # may include pre-req and co-req in later versions but will be listed afterwards
 courses = [
 	["course_name_1",  priority_number, [["M",  "830", "1120", "Burnaby"]], [] ], 
@@ -23,7 +26,7 @@ courses = [
 	["course_name_7",  priority_number, [["T", "1430", "1620", "Burnaby"], ["TH", "1430", "1520", "Burnaby"]], [] ],
 	["course_name_8",  priority_number, [["T", "1430", "1620", "Burnaby"], ["TH", "1430", "1520", "Burnaby"]], [] ], 
 	["course_name_9",  priority_number, [["M", "930" , "1020", "Burnaby"], ["W", "930" , "1020", "Burnaby"], ["F", "930" , "1020", "Burnaby"]], [] ],
-	["course_name_10", priority_number, [["M", "1230" , "1320", "Burnaby"],["W", "1230" , "1320", "Burnaby"], ["F", "1230" , "1320", "Burnaby"]], [] ],
+	["course_name_10", priority_number, [["M", "1130" , "1220", "Surrey"],["W", "1130" , "1220", "Burnaby"], ["F", "1130" , "1220", "Burnaby"]], [] ],
 	["course_name_11", priority_number, [["M", "2030" , "2120", "Burnaby"],["W", "2030" , "2120", "Burnaby"], ["F", "2030" , "2120", "Burnaby"]], [] ],
 ]
 
