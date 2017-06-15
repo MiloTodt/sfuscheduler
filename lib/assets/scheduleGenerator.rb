@@ -290,6 +290,7 @@ class Scheduler
 		@fourCourses = []
 		@fiveCourses = []
 		@sixCourses = []
+		@courseTable = {1 => @oneCourse, 2 => @twoCourses, 3=>@threeCourses, 4=>@fourCourses, 5=>@fiveCourses, 6=>@sixCourses}
 
 		if @num_courses > 0
 			courses.each do |course|
@@ -397,35 +398,11 @@ class Scheduler
 	end
 
 	def getSchedule(num)
-		if num == 1
-			self.wrapper(@oneCourse)
-		elsif num == 2
-			self.wrapper(@twoCourses)
-		elsif num == 3
-			self.wrapper(@threeCourses)
-		elsif num == 4
-			self.wrapper(@fourCourses)
-		elsif num == 5
-			self.wrapper(@fiveCourses)
-		elsif num == 6
-			self.wrapper(@sixCourses)
-		end				
+		self.wrapper(@courseTable[num])
 	end
 
 	def getPrioritySchedule(num)
-		if num == 1
-			self.priorityWrapper(@oneCourse)
-		elsif num == 2
-			self.priorityWrapper(@twoCourses)
-		elsif num == 3
-			self.priorityWrapper(@threeCourses)
-		elsif num == 4
-			self.priorityWrapper(@fourCourses)
-		elsif num == 5
-			self.priorityWrapper(@fiveCourses)
-		elsif num == 6
-			self.priorityWrapper(@sixCourses)
-		end				
+		self.priorityWrapper(@courseTable[num])
 	end		
 
 
