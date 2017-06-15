@@ -30,6 +30,8 @@ WEEK = ["M", "T", "W", "TH", "F", "S", "SU"]
 HOURS = ["830", "930", "1030", "1130", "1230", "1330", "1430",
 		"1530", "1630", "1730", "1830", "1930", "2030"]
 
+TRANSIT_CONFLICT = [-1, 0, 1]
+
 DAYS = {"M" => 0, "T" => 1, "W" => 2, 
 	"TH" => 3, "F" => 4, "S" => 5, "SU" => 6}
 
@@ -101,8 +103,6 @@ class Week
 		@courses = []
 	end
 
-	
-
 	def getCourses()
 		@courses
 	end
@@ -156,7 +156,6 @@ end
 # Course Class
 #=================================================================
 class Course
-	# dates = [[day_1, start, end],...[day_n, start, end]]
 	def initialize(name, priority, dates, requisites) 
 		@name = name
 		@priority = priority
@@ -213,38 +212,53 @@ class Course
 
 	# check if self has conflicts with course location and time wise
 	def checkConflict(course)
+		if self.checkDupe(course) and 
+		(self.checkLocationConflict(course) or self.checkTimeConflict(course))
+			@conflicts << course
+		end
+
+	end
+
+	# check if comparing with self or if already in conflicts
+	def checkDupe(course)
+		if not self == course 
+			if not self.inConflict(course)
+				return true
+			end
+		end
+		return false
+	end
+
+
+	def checkTimeConflict(course)
 		check = Week.new()
 		check.addCourse(self)
-		# check if conflict with self
-		if not self == course
-			# check if already made conflict before
-			if not self.inConflict(course)
-				# check if course has time conflicts
-				if not check.addCourse(course)
-					@conflicts << course
-				# check for location conflict
-				else
-					tmp = course.getDates
-					@dates.length.times do |i|
-						tmp.length.times do |j|
-							# check if same day
-							if @dates[i][CONVERT["DAY"]] == tmp[j][CONVERT["DAY"]]
-								# check if different locations
-								if @dates[i][CONVERT["LOCATION"]] != tmp[j][CONVERT["LOCATION"]]
-									# check if courses occur in tandem
-									if (([-1, 0, 1].include? (START_TIMES[@dates[i][CONVERT["START"]]] - END_TIMES[tmp[j][CONVERT["END"]]]) )or
-										([-1, 0, 1].include? (END_TIMES[@dates[i][CONVERT["END"]]] - START_TIMES[tmp[j][CONVERT["START"]]]) ) )
-										if not self.inConflict(course)
-											@conflicts << course
-										end
-									end
-								end
+		if not check.addCourse(course)
+			return true
+		end
+		return false
+	end
+
+	def checkLocationConflict(course)
+		tmp = course.getDates
+		@dates.length.times do |i|
+			tmp.length.times do |j|
+				# check if same day
+				if @dates[i][CONVERT["DAY"]] == tmp[j][CONVERT["DAY"]]
+					# check if different locations
+					if @dates[i][CONVERT["LOCATION"]] != tmp[j][CONVERT["LOCATION"]]
+						# check if courses occur in tandem
+						if ((TRANSIT_CONFLICT.include? (START_TIMES[@dates[i][CONVERT["START"]]] - END_TIMES[tmp[j][CONVERT["END"]]] ) ) or
+							(TRANSIT_CONFLICT.include? (END_TIMES[@dates[i][CONVERT["END"]]] - START_TIMES[tmp[j][CONVERT["START"]]] ) ) )
+							if not self.inConflict(course)
+								return true
 							end
 						end
 					end
 				end
 			end
 		end
+		return false
 	end
 
 # debug purposes
@@ -275,6 +289,7 @@ class Scheduler
 		@threeCourses = []
 		@fourCourses = []
 		@fiveCourses = []
+		@sixCourses = []
 
 		if @num_courses > 0
 			courses.each do |course|
@@ -292,39 +307,50 @@ class Scheduler
 			end
 		end
 	end
-	
-	def generateSchedules
-		self.checkConflicts()
-	end
 
-	def checkConflicts
+	def generateSchedules
 		if @num_courses > 0
 			# do for 1 course
 			@num_courses.times do |i|
 				first = @courses[i]
-				@oneCourse << [first]
+				sum = first.getPriority
+				@oneCourse << [sum, [first]]
 				# Do for 2 course
 				(@num_courses-i).times do |j|
 					second = @courses[i+j]
 					if not first.inConflict(second)
-						@twoCourses << [first, second]
+						sum = first.getPriority + second.getPriority 
+						@twoCourses << [sum, [first, second]]
 						# do for 3 courses
 						(@num_courses-i-j).times do |k|
 							third = @courses[i+j+k]
 							if not (first.inConflict(third) or second.inConflict(third) )
-								@threeCourses << [first, second, third]
+								sum = first.getPriority + second.getPriority + third.getPriority
+								@threeCourses << [sum, [first, second, third]]
 								# do for 4 courses
 								(@num_courses-i-j-k).times do |l|
 									fourth = @courses[i+j+k+l]
 									if not (first.inConflict(fourth) or 
 									second.inConflict(fourth) or third.inConflict(fourth))
-										@fourCourses << [first, second, third, fourth]
+										sum = first.getPriority + second.getPriority + third.getPriority + fourth.getPriority
+										@fourCourses << [sum, [first, second, third, fourth]]
 										# do for 5 courses
 										(@num_courses-i-j-k-l).times do |m|
 											fifth = @courses[i+j+k+l+m]
 											if not (first.inConflict(fifth) or second.inConflict(fifth) or
 											third.inConflict(fifth) or fourth.inConflict(fifth))
-													@fiveCourses << [first, second, third, fourth, fifth]
+												sum = first.getPriority + second.getPriority + third.getPriority + fourth.getPriority + fifth.getPriority
+												@fiveCourses << [sum, [first, second, third, fourth, fifth]]
+												# do for 6 courses
+												(@num_courses-i-j-k-l-m).times do |n|
+													sixth = @courses[i+j+k+l+m+n]
+													if not (first.inConflict(sixth) or second.inConflict(sixth) or
+														third.inConflict(sixth) or fourth.inConflict(sixth) or 
+														fifth.inConflict(sixth))
+														sum = first.getPriority + second.getPriority + third.getPriority + fourth.getPriority + fifth.getPriority + sixth.getPriority
+														@sixCourses << [sum, [first, second, third, fourth, fifth, sixth]]
+													end
+												end
 											end
 										end
 									end
@@ -341,10 +367,27 @@ class Scheduler
 		ret = []
 		schedules.each do |schedule|
 			tmp = []
-			schedule.each do |course|
+			schedule[1].each do |course|
 				tmp << course.getName
 			end
 			ret << tmp
+		end
+		return ret
+	end
+
+	# Sort from highest priority to lowest
+	def priorityWrapper(schedules)
+		ret = []
+		schedules.each do |schedule|
+			tmp = schedule[1]
+			tmp2 = []
+			tmp3 = []
+			tmp2 << schedule[0]
+			schedule[1].each do |course|
+				tmp3 << course.getName
+			end
+			tmp2 << tmp3
+			ret << tmp2
 		end
 		return ret
 	end
@@ -353,21 +396,38 @@ class Scheduler
 		@courses
 	end
 
-	def get1
-		self.wrapper(@oneCourse)
+	def getSchedule(num)
+		if num == 1
+			self.wrapper(@oneCourse)
+		elsif num == 2
+			self.wrapper(@twoCourses)
+		elsif num == 3
+			self.wrapper(@threeCourses)
+		elsif num == 4
+			self.wrapper(@fourCourses)
+		elsif num == 5
+			self.wrapper(@fiveCourses)
+		elsif num == 6
+			self.wrapper(@sixCourses)
+		end				
 	end
-	def get2
-		self.wrapper(@twoCourses)
-	end
-	def get3
-		self.wrapper(@threeCourses)
-	end
-	def get4	
-		self.wrapper(@fourCourses)
-	end
-	def get5
-		self.wrapper(@fiveCourses)
-	end
+
+	def getPrioritySchedule(num)
+		if num == 1
+			self.priorityWrapper(@oneCourse)
+		elsif num == 2
+			self.priorityWrapper(@twoCourses)
+		elsif num == 3
+			self.priorityWrapper(@threeCourses)
+		elsif num == 4
+			self.priorityWrapper(@fourCourses)
+		elsif num == 5
+			self.priorityWrapper(@fiveCourses)
+		elsif num == 6
+			self.priorityWrapper(@sixCourses)
+		end				
+	end		
+
 
 # debug purposes
 	def printConflicts
