@@ -8,6 +8,7 @@
 # maximum  courses
 # returns an array of valid schedules 
 # checks for time, location, conflicts
+# Will not match pre-reqs
 # matches labs with classes & priorities
 # For Example
 # Given Course_1, Course_2, Course_3, Course_4 
@@ -25,6 +26,9 @@
 #=====================================================================
 # CONSTANTS
 #=====================================================================
+MAX_COURSES_PER_SCHEDULE = 6
+MAX_SCHEDULES_MADE = 38760	# 20 choose 6 assuming no conflicts
+
 WEEK = ["M", "T", "W", "TH", "F", "S", "SU"]
 
 HOURS = ["830", "930", "1030", "1130", "1230", "1330", "1430",
@@ -161,7 +165,8 @@ class Course
 		@priority = priority
 		@dates = []
 		@conflicts = []
-		@requisites = []
+		@co_req = []
+		@pre_req = []
 		if dates.length > 0
 			dates.each do |date|
 				@dates << date
@@ -169,7 +174,16 @@ class Course
 		end
 		if requisites.length > 0
 			requisites.each do |requisite|
-				@requisites << requisite
+
+				if requisite[0] == "CO"
+					(requisite.length-1).times do |co|
+						@co_req << requisite[co+1]
+					end
+				elsif requisite[0] == "PRE"
+					(requisite.length-1).times do |pre|
+						@pre_req << requisite[pre+1]
+					end
+				end
 			end
 		end
 	end
@@ -197,23 +211,15 @@ class Course
 		@conflicts
 	end 
 
-	# check if course is in @conflicts
-	def inConflict(course)
-		@conflicts.each do |conflict|
-			if conflict == course
-				return true
-			end
-		end
-		if self == course
-			return true
-		end
-		return false
+	def getCoReq
+		@co_req
 	end
 
 	# check if self has conflicts with course location and time wise
 	def checkConflict(course)
 		if self.checkDupe(course) and 
-		(self.checkLocationConflict(course) or self.checkTimeConflict(course))
+		(self.checkLocationConflict(course) or self.checkTimeConflict(course)) or 
+		@pre_req.include?(course.getName)
 			@conflicts << course
 		end
 
@@ -229,7 +235,19 @@ class Course
 		return false
 	end
 
-
+# check if course is in @conflicts
+	def inConflict(course)
+		@conflicts.each do |conflict|
+			if conflict == course
+				return true
+			end
+		end
+		if self == course
+			return true
+		end
+		return false
+	end
+	
 	def checkTimeConflict(course)
 		check = Week.new()
 		check.addCourse(self)
@@ -271,8 +289,6 @@ class Course
 		end
 		return ret
 	end
-
-
 end
 
 
@@ -291,6 +307,7 @@ class Scheduler
 		@fiveCourses = []
 		@sixCourses = []
 		@courseTable = {1 => @oneCourse, 2 => @twoCourses, 3=>@threeCourses, 4=>@fourCourses, 5=>@fiveCourses, 6=>@sixCourses}
+
 
 		if @num_courses > 0
 			courses.each do |course|
@@ -319,7 +336,7 @@ class Scheduler
 				# Do for 2 course
 				(@num_courses-i).times do |j|
 					second = @courses[i+j]
-					if not first.inConflict(second)
+					if not first.inConflict(second) 
 						sum = first.getPriority + second.getPriority 
 						@twoCourses << [sum, [first, second]]
 						# do for 3 courses
@@ -361,9 +378,57 @@ class Scheduler
 					end
 				end
 			end
+			self.validateCoReq
 		end
 	end
 
+	# make sure all schedules meet the co-requisite requirements
+	def validateCoReq
+		cur_co = 0
+		# [@oneCourse, @twoCourses, ... @sixCourses]
+		(@courseTable.length).times do |num_courses|
+			checking = true
+			i = 0
+			while checking and @courseTable[num_courses+1].length > i
+				schedule_array = @courseTable[num_courses+1][i]	# has format[sum,[course1, course2, ...]]
+				co_req = []
+				schedule_array[1].each do |course|	# get co-requisites for each course
+					course.getCoReq.each do |co|	
+						co_req << co 				
+					end 
+				end
+				if co_req.length > 0
+					tmp = self.singleWrapper(schedule_array)
+					co_req.each do |co|
+						if tmp.include? co
+							cur_co+=1
+						end
+					end
+				end
+				if cur_co != co_req.length
+					@courseTable[num_courses+1].delete(schedule_array)
+				else
+					i += 1	
+					if i == @courseTable[num_courses+1].length
+						checking = false
+					end
+				end
+				cur_co = 0
+				tmp = []
+			end
+		end
+	end
+
+	# converts one schedule of courses to string
+	def singleWrapper(schedule)
+		ret = []
+		schedule[1].each do |course|
+			ret << course.getName
+		end
+		return ret
+	end
+
+	# converts from array of courses class to array of strings
 	def wrapper(schedules)
 		ret = []
 		schedules.each do |schedule|
@@ -381,6 +446,9 @@ class Scheduler
 	end
 
 	def getSchedule(num_courses, num_schedules, prioritized)
+		if num_courses > MAX_COURSES_PER_SCHEDULE or num_schedules > MAX_SCHEDULES_MADE
+			return []
+		end
 		if prioritized
 			@courseTable[num_courses].sort!{|a, b| a[0] <=>b[0]}.reverse!
 		end
@@ -389,9 +457,9 @@ class Scheduler
 	end
 
 # debug purposes
-	def printConflicts
+	def printConstraints
 		@courses.each do |course|
-			puts "#{course.getName} has conflicts with #{course.getConflictsNames}"
+			puts "#{course.getName}\n\thas Conflicts:\t#{course.getConflictsNames}\n\thas Co-Reqs:\t#{course.getCoReq}"
 		end
 		puts
 	end
