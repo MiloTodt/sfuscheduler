@@ -32,42 +32,53 @@
     <option value="MATH 100">
     <option value="MACM 101">       
 </datalist>
-<input name="classes" list="classList" />
+<%#<input name="classes" list="classList" />%>
 <datalist id="classList"></datalist>
 
-<script type="text/javascript">
-  var myClasses = new Array();
-  myClasses[0]='CMPT 120';
-  myClasses[1]='MACM 201';
-  myClasses[2]= 'CMPT 320';
-  myClasses[3]= 'CMPT 300';
-  myClasses[4]=  'CMPT 405';
-  myClasses[5]= 'CMPT 225';
-  myClasses[6]= 'CMPT 307';
-  myClasses[7]='CMPT 379';
-  myClasses[8]=  'CMPT 276';
-  myClasses[9]=  'ARCH 131';
-  myClasses[10]= 'HUM 102W';
-  myClasses[11]=  'ARCH 101';
-  myClasses[12]= 'BISC 100';
-  myClasses[13]=  'BPK 100';
-  myClasses[14]=  'HIST 100';
-  myClasses[15]=  'ARCH 300';
-  myClasses[16]= 'ARCH 200';
-  myClasses[17]=  'HUM 100';
-  myClasses[18]=  'CHEM 100';
-  myClasses[19]=  'BIOL 100';
-  myClasses[20]=  'BIOC 100';
-  myClasses[21]=  'MATH 100';
-  myClasses[22]=  'MACM 101';
+<script>
+    var counter = 1;
+    var limit = 7;
+    var myClasses = new Array();
+  myClasses[0]=['CMPT 120', ["M", "830", "1020"],  ["F", "830", "920"] ];
+  myClasses[1]=['MACM 201', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
+  myClasses[2]=[ 'CMPT 320', ["M", "1230", "1320"], ["W", "1230", "1720"], ["F", "1230", "1370"] ];
+  myClasses[3]=[ 'CMPT 307', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
+  myClasses[4]=['CMPT 379', ["M", "930", "1020"], ["W", "930", "1020"], ["F", "930", "1020"] ];
+  myClasses[5]=[  'CMPT 276', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
+  myClasses[6]=[  'ARCH 131', ["T", "1330", "1720"], ["TH", "1230", "1320"],  ];
+  myClasses[7]=[ 'HUM 102W', ["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"] ];
+    var options = '';
+    for(var i = 0; i < myClasses.length; i++)
+    options += '<option value="'+myClasses[i][0]+'" />';
+    document.getElementById('classList').innerHTML = options;
 
-  var options = '';
+    function addInput(divName){
 
-  for(var i = 0; i < myClasses.length; i++)
-    options += '<option value="'+myClasses[i]+'" />';
+         if (counter == limit)  {
+              alert("You have reached the limit of adding " + counter + " classes");
+         }
+         else {
+              var newdiv = document.createElement('div');
+              newdiv.innerHTML = "Class " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
+              document.getElementById(divName).appendChild(newdiv);
+              counter++;
+         }
 
-  document.getElementById('classList').innerHTML = options;
-</script>
+    }
+    </script>
+    <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>
+
+    <form method="POST">
+
+         <div id="dynamicInput">
+
+              Class 1<br><input type="text" name="myInputs[]" list="classList"placeholder="Add/Remove Class Here">
+
+         <input type="button" value="Add another class" onClick="addInput('dynamicInput');">
+         <input type="button" value="Remove" onClick="addInput('dynamicInput');">
+         </div>
+
+    </form>
 
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
 
@@ -86,11 +97,6 @@
 
     var classes = [];
     var classNum = 0;
-    var validClasses =	[["CMPT 276", ["M", "1430", "1520"], ["W", "1430", "1520"], ["F", "1430", "1520"] ],
-	["CMPT 295", ["M", "1530", "1620"], ["W", "1530", "1620"], ["F", "1530", "1620"] ],
-	["CMPT 320", ["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"] ],
-	["CMPT 371", ["M", "1430", "1720"], ["F", "930", "1020"] ],
-	["CMPT 391", ["M", "830", "1020"],  ["F", "830", "920"] ]]
 
     
     <!-- Add/Remove will only accept text of the form ex. CMPT 320/IAT 100 -->
