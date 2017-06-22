@@ -32,6 +32,42 @@
     <option value="MATH 100">
     <option value="MACM 101">       
 </datalist>
+<input name="classes" list="classList" />
+<datalist id="classList"></datalist>
+
+<script type="text/javascript">
+  var myClasses = new Array();
+  myClasses[0]='CMPT 120';
+  myClasses[1]='MACM 201';
+  myClasses[2]= 'CMPT 320';
+  myClasses[3]= 'CMPT 300';
+  myClasses[4]=  'CMPT 405';
+  myClasses[5]= 'CMPT 225';
+  myClasses[6]= 'CMPT 307';
+  myClasses[7]='CMPT 379';
+  myClasses[8]=  'CMPT 276';
+  myClasses[9]=  'ARCH 131';
+  myClasses[10]= 'HUM 102W';
+  myClasses[11]=  'ARCH 101';
+  myClasses[12]= 'BISC 100';
+  myClasses[13]=  'BPK 100';
+  myClasses[14]=  'HIST 100';
+  myClasses[15]=  'ARCH 300';
+  myClasses[16]= 'ARCH 200';
+  myClasses[17]=  'HUM 100';
+  myClasses[18]=  'CHEM 100';
+  myClasses[19]=  'BIOL 100';
+  myClasses[20]=  'BIOC 100';
+  myClasses[21]=  'MATH 100';
+  myClasses[22]=  'MACM 101';
+
+  var options = '';
+
+  for(var i = 0; i < myClasses.length; i++)
+    options += '<option value="'+myClasses[i]+'" />';
+
+  document.getElementById('classList').innerHTML = options;
+</script>
 
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
 
@@ -50,6 +86,11 @@
 
     var classes = [];
     var classNum = 0;
+    var validClasses =	[["CMPT 276", ["M", "1430", "1520"], ["W", "1430", "1520"], ["F", "1430", "1520"] ],
+	["CMPT 295", ["M", "1530", "1620"], ["W", "1530", "1620"], ["F", "1530", "1620"] ],
+	["CMPT 320", ["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"] ],
+	["CMPT 371", ["M", "1430", "1720"], ["F", "930", "1020"] ],
+	["CMPT 391", ["M", "830", "1020"],  ["F", "830", "920"] ]]
 
     
     <!-- Add/Remove will only accept text of the form ex. CMPT 320/IAT 100 -->

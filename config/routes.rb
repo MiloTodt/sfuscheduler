@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :schedules
   resources :classtimes
   get 'welcome/index'
   resources :calendarmt #controller for displaying calendar
