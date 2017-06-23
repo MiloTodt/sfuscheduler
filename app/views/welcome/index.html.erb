@@ -43,7 +43,7 @@
 <p id="classBox3" name="class3"></p>
 <p id="classBox4" name="class4"></p>
 <p id="classBox5" name="class5"></p>
-  <input type="submit" value="Submit" method="post">
+  <%#<input type="submit" value="Submit" method="post">%>
 </form>
 
 <button onclick="createSchedule()">CREATE SCHEDULE</button>
@@ -91,7 +91,7 @@
     }
 
     document.body.appendChild(form);
-    form.submit();
+    <%#form.submit();%>
 }
     
     
@@ -140,6 +140,3 @@
     window.onload = clearBox;
 
 </script>
-<%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
-      :class => "inbox-sf-add-btn tip", :method => :get %>
-       <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :classes => "classBox0", :action => "create"} , {:method=>:post}  %>

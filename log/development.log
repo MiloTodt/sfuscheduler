@@ -14392,3 +14392,40 @@ ArgumentError (When assigning attributes, you must pass a hash as an argument.):
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 00:12:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (2.2ms)
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 13:21:00 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 13:21:04 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 13:21:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 13:22:01 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.7ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-23 13:22:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.5ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
