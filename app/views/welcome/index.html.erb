@@ -10,27 +10,28 @@
 <p> SFU COURSE SCHEDULER</p>
 
 <datalist id="classes">
+    <option value="MACM 201"> 
     <option value="CMPT 320">
-    <option value="CMPT 300">
-    <option value="CMPT 405">
-    <option value="CMPT 225">
+    <%#<option value="CMPT 300">%>
+    <%#<option value="CMPT 405">%>
+    <%#<option value="CMPT 225">%>
     <option value="CMPT 307">
     <option value="CMPT 379">
     <option value="CMPT 276">
     <option value="ARCH 131">
     <option value="HUM 102W">
-    <option value="ARCH 101">
-    <option value="BISC 100">
-    <option value="BPK 100">
-    <option value="HIST 100">
-    <option value="ARCH 300">
-    <option value="ARCH 200">
-    <option value="HUM 100">
-    <option value="CHEM 100">
-    <option value="BIOL 100">
-    <option value="BIOC 100">
-    <option value="MATH 100">
-    <option value="MACM 101">       
+    <%#<option value="ARCH 101">%>
+    <%#<option value="BISC 100">%>
+    <%#<option value="BPK 100">%>
+    <%#<option value="HIST 100">%>
+    <%#<option value="ARCH 300">%>
+    <%#<option value="ARCH 200">%>
+    <%#<option value="HUM 100">%>
+    <%#<option value="CHEM 100">%>
+    <%#<option value="BIOL 100">%>
+    <%#<option value="BIOC 100">%>
+    <%#<option value="MATH 100">%>
+    <%#<option value="MACM 101">       %>
 </datalist>
 <%#<input name="classes" list="classList" />%>
 <datalist id="classList"></datalist>
@@ -39,14 +40,14 @@
     var counter = 1;
     var limit = 7;
     var myClasses = new Array();
-  myClasses[0]=['CMPT 120', ["M", "830", "1020"],  ["F", "830", "920"] ];
-  myClasses[1]=['MACM 201', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
-  myClasses[2]=[ 'CMPT 320', ["M", "1230", "1320"], ["W", "1230", "1720"], ["F", "1230", "1370"] ];
-  myClasses[3]=[ 'CMPT 307', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
-  myClasses[4]=['CMPT 379', ["M", "930", "1020"], ["W", "930", "1020"], ["F", "930", "1020"] ];
-  myClasses[5]=[  'CMPT 276', ["T", "1630", "1720"], ["TH", "1630", "1720"],  ];
-  myClasses[6]=[  'ARCH 131', ["T", "1330", "1720"], ["TH", "1230", "1320"],  ];
-  myClasses[7]=[ 'HUM 102W', ["M", "1630", "1720"], ["W", "1630", "1720"], ["F", "1630", "1720"] ];
+  myClasses[0]=['CMPT 120', ['M', '830', '1020'],  ['F', '830', '920'] ];
+  myClasses[1]=['MACM 201', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
+  myClasses[2]=[ 'CMPT 320', ['M', '1230', '1320'], ['W', '1230', '1720'], ['F', '1230', '1370'] ];
+  myClasses[3]=[ 'CMPT 307', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
+  myClasses[4]=['CMPT 379', ['M', '930', '1020'], ['W', '930', '1020'], ['F', '930', '1020'] ];
+  myClasses[5]=[  'CMPT 276', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
+  myClasses[6]=[  'ARCH 131', ['T', '1330', '1720'], ['TH', '1230', '1320']  ];
+  myClasses[7]=[ 'HUM 102W', ['M', '1630', '1720'], ['W', '1630', '1720'], ['F', '1630', '1720'] ];
     var options = '';
     for(var i = 0; i < myClasses.length; i++)
     options += '<option value="'+myClasses[i][0]+'" />';
