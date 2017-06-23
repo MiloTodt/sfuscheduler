@@ -43,13 +43,10 @@ class CoursesController < ApplicationController
   # PATCH/PUT /courses/1.json
   def update
     respond_to do |format|
-      if @courses.update(courses_params)
         format.html { redirect_to @courses, notice: 'Course was successfully updated.' }
         format.json { render :show, status: :ok, location: @courses }
-      else
-        format.html { render :edit }
-        format.json { render json: @courses.errors, status: :unprocessable_entity }
-      end
+
+
     end
   end
 

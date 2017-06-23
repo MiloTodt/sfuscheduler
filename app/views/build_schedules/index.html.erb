@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Build Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Courses</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @build_schedules.each do |build_schedule| %>
+      <tr>
+        <td><%= build_schedule.courses %></td>
+        <td><%= link_to 'Show', build_schedule %></td>
+        <td><%= link_to 'Edit', edit_build_schedule_path(build_schedule) %></td>
+        <td><%= link_to 'Destroy', build_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Build schedule', new_build_schedule_path %>
