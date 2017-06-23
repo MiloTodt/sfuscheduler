@@ -5511,3 +5511,406 @@ ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (29.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:03:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (23.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `form_with' for #<#<Class:0x0055acc40526b8>:0x007fd63ce68e98>
+Did you mean?  form_tag):
+    149:         }
+    150: 
+    151:     }
+    152: <%= form_with(model: @courses) do |f| %>
+    153: 
+    154: <% end %>
+    155:     
+  app/views/welcome/index.html.erb:152:in `_app_views_welcome_index_html_erb__121218618991681937_70279060704960'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.9ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2017-06-22 21:04:59 -0700
+Processing by SchedulesController#index as HTML
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb (1.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:05:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (3.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for {:model=>nil}:Hash):
+    149:         }
+    150: 
+    151:     }
+    152: <%= form_for(model: @courses) do |f| %>
+    153: 
+    154: <% end %>
+    155:     
+  app/views/welcome/index.html.erb:152:in `_app_views_welcome_index_html_erb__121218618991681937_70279076229520'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:05:28 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (4.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for {:courses=>nil}:Hash):
+    149:         }
+    150: 
+    151:     }
+    152: <%= form_for(courses: @courses) do |f| %>
+    153: 
+    154: <% end %>
+    155:     
+  app/views/welcome/index.html.erb:152:in `_app_views_welcome_index_html_erb__121218618991681937_70278891993680'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:05:44 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `model_name' for {:courses=>nil}:Hash):
+    149:         }
+    150: 
+    151:     }
+    152: <%= form_for(courses: @courses) do |f| %>
+    153: 
+    154: <% end %>
+    155:     
+  app/views/welcome/index.html.erb:152:in `_app_views_welcome_index_html_erb__121218618991681937_70278891993680'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:05:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.6ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 21:05:48 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (13.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2017-06-22 21:08:16 -0700
+Processing by SchedulesController#index as HTML
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:08:20 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 21:08:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:08:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.6ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 21:08:34 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:08:42 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (35.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `new_admin_course_path' for #<#<Class:0x0055acc40526b8>:0x007fd63e6e4990>
+Did you mean?  new_course_path):
+    158:     window.onload = clearBox;
+    159: 
+    160: </script>
+    161: <%= button_to "Add", new_admin_course_path, :id => "open-contacts-dialog-btn",
+    162:       :class => "inbox-sf-add-btn tip", :method => :get %>
+  app/views/welcome/index.html.erb:161:in `_app_views_welcome_index_html_erb__121218618991681937_70279073553200'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:08:53 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 21:08:53 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (20.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-06-22 21:08:56 -0700
+Processing by CoursesController#index as HTML
+  [1m[35mCourses Load (0.1ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb (6.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2017-06-22 21:10:42 -0700
+Processing by SchedulesController#index as HTML
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules/new" for 127.0.0.1 at 2017-06-22 21:10:44 -0700
+Processing by SchedulesController#new as HTML
+  Rendered schedules/_form.html.erb (4.6ms)
+  Rendered schedules/new.html.erb (5.5ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/schedules" for 127.0.0.1 at 2017-06-22 21:10:45 -0700
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9FVK6dv1xBa0Jn69yWU+th3XpM9ssQcDHB4V364mwUMHbnT/OzPvumSyuGenbJI+AZj1U7gAHQg4yGmna5EK8g==", "commit"=>"Create Schedule"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schedules" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-06-23 04:10:45.784095"], ["updated_at", "2017-06-23 04:10:45.784095"]]
+  [1m[35m (109.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/schedules/1
+Completed 302 Found in 115ms (ActiveRecord: 110.3ms)
+
+
+Started GET "/schedules/1" for 127.0.0.1 at 2017-06-22 21:10:45 -0700
+Processing by SchedulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/show.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.2ms)
