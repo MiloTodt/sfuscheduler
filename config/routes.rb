@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :courses
+  resources :course
+  
   resources :schedules
   resources :classtimes
   get 'welcome/index'
