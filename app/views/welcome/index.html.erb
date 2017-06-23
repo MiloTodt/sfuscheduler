@@ -1,4 +1,9 @@
 
+
+
+
+
+
 <p> SFU COURSE SCHEDULER</p>
 
 <datalist id="classes">
@@ -160,3 +165,4 @@
 </script>
 <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
       :class => "inbox-sf-add-btn tip", :method => :get %>
+       <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :action => "create"} , {:method=>:post}  %>

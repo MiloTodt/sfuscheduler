@@ -6839,3 +6839,845 @@ Processing by CoursesController#index as HTML
   [1m[36mCourses Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
   Rendered courses/index.html.erb (2.6ms)
 Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:38:14 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (7.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Day):
+    1: 
+    2: <p> SFU COURSE SCHEDULER</p>
+    3: <%=monday = Day.new("Monday")=%>
+    4: <datalist id="classes">
+    5:     <option value="MACM 201"> 
+    6:     <option value="CMPT 320">
+  app/views/welcome/index.html.erb:3:in `_app_views_welcome_index_html_erb___2435383966485620637_70031029295600'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:38:36 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (4.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Week):
+    1: 
+    2: <p> SFU COURSE SCHEDULER</p>
+    3: <%=monday = Week.new("Monday")=%>
+    4: <datalist id="classes">
+    5:     <option value="MACM 201"> 
+    6:     <option value="CMPT 320">
+  app/views/welcome/index.html.erb:3:in `_app_views_welcome_index_html_erb___2435383966485620637_70031028902780'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:38:49 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (4.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (When assigning attributes, you must pass a hash as an argument.):
+    1: 
+    2: <p> SFU COURSE SCHEDULER</p>
+    3: <%=monday = Schedule.new("Monday")=%>
+    4: <datalist id="classes">
+    5:     <option value="MACM 201"> 
+    6:     <option value="CMPT 320">
+  app/views/welcome/index.html.erb:3:in `_app_views_welcome_index_html_erb___2435383966485620637_70031030961020'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:38:55 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (31.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `schedule' for #<#<Class:0x0056449581cab0>:0x007f62bd19b960>
+Did you mean?  schedule_url):
+    1: 
+    2: <p> SFU COURSE SCHEDULER</p>
+    3: <%=monday = schedule.new("Monday")=%>
+    4: <datalist id="classes">
+    5:     <option value="MACM 201"> 
+    6:     <option value="CMPT 320">
+  app/views/welcome/index.html.erb:3:in `_app_views_welcome_index_html_erb___2435383966485620637_70031028048700'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.7ms)
+
+
+Started GET "/schedules" for 127.0.0.1 at 2017-06-22 21:43:01 -0700
+Processing by SchedulesController#index as HTML
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb (1.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:43:03 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (4.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Week):
+     5: 
+     6: 
+     7: <p> SFU COURSE SCHEDULER</p>
+     8: <%=monday = Week.new("Monday")=%>
+     9: <datalist id="classes">
+    10:     <option value="MACM 201"> 
+    11:     <option value="CMPT 320">
+  app/views/welcome/index.html.erb:8:in `_app_views_welcome_index_html_erb___2435383966485620637_70031028711260'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateBuildSchedules (20170623041358)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "build_schedules"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170623041358"]]
+  [1m[35m (76.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchedulesBuilders (20170623045149)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170623045149"]]
+  [1m[36m (85.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/schedules" for 127.0.0.1 at 2017-06-22 21:57:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchedulesController#index as HTML
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb (4.4ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:57:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (3.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"shedule_generator"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "shedule_generator", :action => "create"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266730977180'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (22.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:57:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"shedule_generator"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "shedule_generator", :action => "new"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266745907560'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:58:23 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"shedules_builders"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "shedules_builders", :action => "create"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266740432420'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:58:36 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"shedules_builders_controller"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "shedules_builders_controller", :action => "create"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266740677960'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:58:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"schedules_builders_controller"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "schedules_builders_controller", :action => "create"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266728792680'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:58:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"schedules_builders_controller"}):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "schedules_builders_controller", :action => "create"} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_47266728792680'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 21:58:55 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 21:58:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.9ms)
+
+
+Started POST "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:58:58 -0700
+Processing by SchedulesBuildersController#create as HTML
+  Parameters: {"authenticity_token"=>"0ttDwjRIro7BZaZVVpbojq4xKSvFoZjcjzr8imxZh9Mh4H3U1I6FIhHxYI84n0QGsn54txEQgter7IDyqe5MYg=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schedules_builders" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-23 04:58:58.042459"], ["updated_at", "2017-06-23 04:58:58.042459"]]
+  [1m[36m (86.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/schedules_builders/1
+Completed 302 Found in 103ms (ActiveRecord: 88.3ms)
+
+
+Started GET "/schedules_builders/1" for 127.0.0.1 at 2017-06-22 21:58:58 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSchedulesBuilder Load (0.2ms)[0m  SELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules_builders/show.html.erb (0.6ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:59:05 -0700
+Processing by SchedulesBuildersController#index as HTML
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT "schedules_builders".* FROM "schedules_builders"[0m
+  Rendered schedules_builders/index.html.erb (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/new" for 127.0.0.1 at 2017-06-22 21:59:07 -0700
+Processing by SchedulesBuildersController#new as HTML
+  Rendered schedules_builders/_form.html.erb (3.7ms)
+  Rendered schedules_builders/new.html.erb (4.6ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:59:09 -0700
+Processing by SchedulesBuildersController#index as HTML
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT "schedules_builders".* FROM "schedules_builders"
+  Rendered schedules_builders/index.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/1" for 127.0.0.1 at 2017-06-22 21:59:10 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules_builders/show.html.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:59:21 -0700
+Processing by SchedulesBuildersController#create as HTML
+  Parameters: {"authenticity_token"=>"0ttDwjRIro7BZaZVVpbojq4xKSvFoZjcjzr8imxZh9Mh4H3U1I6FIhHxYI84n0QGsn54txEQgter7IDyqe5MYg=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schedules_builders" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-06-23 04:59:21.472026"], ["updated_at", "2017-06-23 04:59:21.472026"]]
+  [1m[35m (84.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/schedules_builders/2
+Completed 302 Found in 86ms (ActiveRecord: 84.2ms)
+
+
+Started GET "/schedules_builders/2" for 127.0.0.1 at 2017-06-22 21:59:21 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules_builders/show.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:59:23 -0700
+Processing by SchedulesBuildersController#index as HTML
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT "schedules_builders".* FROM "schedules_builders"
+  Rendered schedules_builders/index.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/2" for 127.0.0.1 at 2017-06-22 21:59:25 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules_builders/show.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/1" for 127.0.0.1 at 2017-06-22 21:59:30 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules_builders/show.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders" for 127.0.0.1 at 2017-06-22 21:59:32 -0700
+Processing by SchedulesBuildersController#index as HTML
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT "schedules_builders".* FROM "schedules_builders"[0m
+  Rendered schedules_builders/index.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/2" for 127.0.0.1 at 2017-06-22 21:59:33 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules_builders/show.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders/2/edit" for 127.0.0.1 at 2017-06-22 21:59:34 -0700
+Processing by SchedulesBuildersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules_builders/_form.html.erb (0.7ms)
+  Rendered schedules_builders/edit.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/schedules_builders/2" for 127.0.0.1 at 2017-06-22 21:59:36 -0700
+Processing by SchedulesBuildersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"24tBYQV5wn5/1udWcHgXcj4HjwJNd6E8Ge/XI2ttUc0osH935b/p0q9CIYwecbv6IkjenpnGuzc9OatbrtqafA==", "commit"=>"Update Schedules builder", "id"=>"2"}
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/schedules_builders_controller.rb:44:in `block in update'
+  app/controllers/schedules_builders_controller.rb:43:in `update'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:02:59 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+...c.user_id , {:method=>:post}  );@output_buffer.to_s
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:170: syntax error, unexpected keyword_ensure, expecting ')'
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+  app/views/welcome/index.html.erb:170: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (20.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:03:22 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (7.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+...courses[] , {:method=>:post}  );@output_buffer.to_s
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:170: syntax error, unexpected keyword_ensure, expecting ')'
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+  app/views/welcome/index.html.erb:170: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:03:58 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:160: syntax error, unexpected ')', expecting =>
+...courses[] , {:method=>:post}  );@output_buffer.safe_append='
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+... "create" , {:method=>:post}  );@output_buffer.safe_append='
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/welcome/index.html.erb:160: syntax error, unexpected ')', expecting =>
+  app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+  app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:04:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+... "create" , {:method=>:post}  );@output_buffer.safe_append='
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/welcome/index.html.erb:169: syntax error, unexpected ')', expecting =>
+  app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:04:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:169: syntax error, unexpected '{', expecting '}'
+...ilders", :action => "create"  {:method=>:post}  );@output_bu...
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/welcome/index.html.erb:169: syntax error, unexpected '{', expecting '}'
+  app/views/welcome/index.html.erb:171: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/welcome/index.html.erb:173: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:05:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (25.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `courses' for #<#<Class:0x0055fa496dca88>:0x007f6e3ce81e88>
+Did you mean?  courses_url):
+    166: <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
+    167:       :class => "inbox-sf-add-btn tip", :method => :get %>
+    168: 
+    169:        <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :action => "create", :courses => courses} , {:method=>:post}  %>
+  app/views/welcome/index.html.erb:169:in `_app_views_welcome_index_html_erb__235585498322480485_70055722485140'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:05:22 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (22.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `courses' for #<#<Class:0x0055fa496dca88>:0x007f6e3e1a5f28>
+Did you mean?  courses_url):
+    157: 
+    158:     
+    159:     function createSchedule() {
+    160:        <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :action => "create", :courses => courses} , {:method=>:post}  %>
+    161:        
+    162:     }
+    163: 
+  app/views/welcome/index.html.erb:160:in `_app_views_welcome_index_html_erb__235585498322480485_70055732520480'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (21.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:05:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (25.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `courses' for #<#<Class:0x0055fa496dca88>:0x0055fa4b1c7d70>
+Did you mean?  courses_url):
+    157: 
+    158:     
+    159:     function createSchedule() {
+    160:        <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :action => "create", :courses => courses} , {:method=>:post}  %>
+    161:        
+    162:     }
+    163: 
+  app/views/welcome/index.html.erb:160:in `_app_views_welcome_index_html_erb__235585498322480485_70055732520480'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 22:05:33 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wp-includes/js/addInput.js" for 127.0.0.1 at 2017-06-22 22:05:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/wp-includes/js/addInput.js"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (21.3ms)
+
+
+Started POST "/schedules_builders" for 127.0.0.1 at 2017-06-22 22:05:48 -0700
+Processing by SchedulesBuildersController#create as HTML
+  Parameters: {"authenticity_token"=>"CyAhMmKN4fdsrOaU+MsIXDopEO0qd24/l2J7ajplcPD4Gx8kgkvKW7w4IE6WwqTUJmZBcf7GdDSztAcS/9K7QQ=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schedules_builders" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-06-23 05:05:48.237479"], ["updated_at", "2017-06-23 05:05:48.237479"]]
+  [1m[36m (92.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/schedules_builders/3
+Completed 302 Found in 95ms (ActiveRecord: 92.8ms)
+
+
+Started GET "/schedules_builders/3" for 127.0.0.1 at 2017-06-22 22:05:48 -0700
+Processing by SchedulesBuildersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSchedulesBuilder Load (0.1ms)[0m  SELECT  "schedules_builders".* FROM "schedules_builders" WHERE "schedules_builders"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered schedules_builders/show.html.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/schedules_builders" for 127.0.0.1 at 2017-06-22 22:05:50 -0700
+Processing by SchedulesBuildersController#index as HTML
+  [1m[36mSchedulesBuilder Load (0.1ms)[0m  [1mSELECT "schedules_builders".* FROM "schedules_builders"[0m
+  Rendered schedules_builders/index.html.erb (1.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)

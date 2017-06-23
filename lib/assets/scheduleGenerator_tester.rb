@@ -1,4 +1,4 @@
-require_relative 'scheduleGenerator'
+require_relative 'schedule_generator'
 
 # refer to this doc for course input layout
 # can support more than 10 courses, but will slow down

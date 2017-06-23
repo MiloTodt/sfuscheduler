@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :build_schedules
+  resources :schedules_builders
   resources :courses
   resources :course
   
