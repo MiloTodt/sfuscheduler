@@ -24,7 +24,7 @@ class SchedulesBuildersController < ApplicationController
   # POST /schedules_builders
   # POST /schedules_builders.json
   def create
-    @schedules_builder = SchedulesBuilder.new(schedules_builder_params)
+    @schedules_builder = SchedulesBuilder.new(params[:classes])
 
     respond_to do |format|
       if @schedules_builder.save
@@ -69,6 +69,6 @@ class SchedulesBuildersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedules_builder_params
-      params[:schedules_builder]
+      params.require(:schedules_builder).permit(:classes)
     end
 end

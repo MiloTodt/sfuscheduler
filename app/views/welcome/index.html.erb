@@ -33,59 +33,18 @@
 <%#<input name="classes" list="classList" />%>
 <datalist id="classList"></datalist>
 
-<script>
-    var counter = 1;
-    var limit = 7;
-    var myClasses = new Array();
-  myClasses[0]=['CMPT 120', ['M', '830', '1020'],  ['F', '830', '920'] ];
-  myClasses[1]=['MACM 201', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
-  myClasses[2]=[ 'CMPT 320', ['M', '1230', '1320'], ['W', '1230', '1720'], ['F', '1230', '1370'] ];
-  myClasses[3]=[ 'CMPT 307', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
-  myClasses[4]=['CMPT 379', ['M', '930', '1020'], ['W', '930', '1020'], ['F', '930', '1020'] ];
-  myClasses[5]=[  'CMPT 276', ['T', '1630', '1720'], ['TH', '1630', '1720']  ];
-  myClasses[6]=[  'ARCH 131', ['T', '1330', '1720'], ['TH', '1230', '1320']  ];
-  myClasses[7]=[ 'HUM 102W', ['M', '1630', '1720'], ['W', '1630', '1720'], ['F', '1630', '1720'] ];
-    var options = '';
-    for(var i = 0; i < myClasses.length; i++)
-    options += '<option value="'+myClasses[i][0]+'" />';
-    document.getElementById('classList').innerHTML = options;
 
-    function addInput(divName){
-
-         if (counter == limit)  {
-              alert("You have reached the limit of adding " + counter + " classes");
-         }
-         else {
-              var newdiv = document.createElement('div');
-              newdiv.innerHTML = "Class " + (counter + 1) + " <br><input type='text' name='myInputs[]'>";
-              document.getElementById(divName).appendChild(newdiv);
-              counter++;
-         }
-
-    }
-    </script>
-    <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>
-
-    <%#<form method="POST">
-
-         <div id="dynamicInput">
-
-              Class 1<br><input type="text" name="myInputs[]" list="classList"placeholder="Add/Remove Class Here">
-
-         <input type="button" value="Add another class" onClick="addInput('dynamicInput');">
-         <input type="button" value="Remove" onClick="addInput('dynamicInput');">
-         </div>
-
-    </form>%>
 
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
-
-<p id="classBox0"></p>
-<p id="classBox1"></p>
-<p id="classBox2"></p>
-<p id="classBox3"></p>
-<p id="classBox4"></p>
-<p id="classBox5"></p>
+<form accept-charset="UTF-8" action="/schedules_builders#new.html" method="post">
+<p id="classBox0" name="class0"></p>
+<p id="classBox1" name="class1"></p>
+<p id="classBox2" name="class2"></p>
+<p id="classBox3" name="class3"></p>
+<p id="classBox4" name="class4"></p>
+<p id="classBox5" name="class5"></p>
+  <input type="submit" value="Submit" method="post">
+</form>
 
 <button onclick="createSchedule()">CREATE SCHEDULE</button>
 
@@ -117,6 +76,23 @@
                 document.getElementById('classBox'+a).innerHTML = classes[a];
             }
     }
+    function post(params) {
+        var path = "/schedules_builders#create"
+    var method =  "post";
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var i = 0 in classNum) {
+        form.appendChild(classes[i])
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
     
     
     <!-- Add new class to array classes and update display on page -->
@@ -157,6 +133,7 @@
 
     
     function createSchedule() {
+        post(classes)
        
     }
 
@@ -165,4 +142,4 @@
 </script>
 <%= button_to "View Course Database", courses_path, :id => "open-contacts-dialog-btn",
       :class => "inbox-sf-add-btn tip", :method => :get %>
-       <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :action => "create"} , {:method=>:post}  %>
+       <%= button_to 'Generate Schedule', {:controller => "schedules_builders", :classes => "classBox0", :action => "create"} , {:method=>:post}  %>

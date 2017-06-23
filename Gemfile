@@ -4,6 +4,7 @@ gem 'calendar_helper', '~> 0.2.6' #for displaying calendar
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 gem 'nokogiri'
+gem 'gon'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -26,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mini_portile2'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'simple_form'
+gem 'bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

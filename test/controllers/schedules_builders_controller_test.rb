@@ -18,7 +18,7 @@ class SchedulesBuildersControllerTest < ActionController::TestCase
 
   test "should create schedules_builder" do
     assert_difference('SchedulesBuilder.count') do
-      post :create, schedules_builder: {  }
+      post :create, schedules_builder: { classes: @schedules_builder.classes }
     end
 
     assert_redirected_to schedules_builder_path(assigns(:schedules_builder))
@@ -35,7 +35,7 @@ class SchedulesBuildersControllerTest < ActionController::TestCase
   end
 
   test "should update schedules_builder" do
-    patch :update, id: @schedules_builder, schedules_builder: {  }
+    patch :update, id: @schedules_builder, schedules_builder: { classes: @schedules_builder.classes }
     assert_redirected_to schedules_builder_path(assigns(:schedules_builder))
   end
 
