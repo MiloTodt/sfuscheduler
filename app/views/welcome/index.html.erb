@@ -1,11 +1,3 @@
-<h1>Hi Brian Alex and Nick!</h1>
-<p> This file is the default landing page for our site and it is found at</p>
-<p> app/views/welcome/index.html.erb</p>
-
-
-<%= calendar number_of_days: 84 do |date| %>
-  <%= date %>
-<% end %>
 
 <p> SFU COURSE SCHEDULER</p>
 
@@ -69,7 +61,7 @@
     </script>
     <script src="/wp-includes/js/addInput.js" language="Javascript" type="text/javascript"></script>
 
-    <form method="POST">
+    <%#<form method="POST">
 
          <div id="dynamicInput">
 
@@ -79,7 +71,7 @@
          <input type="button" value="Remove" onClick="addInput('dynamicInput');">
          </div>
 
-    </form>
+    </form>%>
 
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
 
@@ -160,7 +152,7 @@
 
     
     function createSchedule() {
-
+        showList()
     }
 
     window.onload = clearBox;
