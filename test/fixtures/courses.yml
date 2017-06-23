@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  times: MyString
+  times: MyText
 
 two:
   name: MyString
-  times: MyString
+  times: MyText

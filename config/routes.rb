@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :schedules
   resources :classtimes
   get 'welcome/index'
-  resources :calendarmt #controller for displaying calendar
+  resources :coursesmt
+  
   root 'welcome#index' #This makes welcome/index the default landing page -Milo
 
   # The priority is based upon order of creation: first created -> highest priority.
