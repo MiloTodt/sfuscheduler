@@ -43,7 +43,7 @@
 <p id="classBox3" name="class3"></p>
 <p id="classBox4" name="class4"></p>
 <p id="classBox5" name="class5"></p>
-  <%#<input type="submit" value="Submit" method="post">%>
+  <input type="submit" value="Submit" method="post"> 
 </form>
 
 <button onclick="createSchedule()">CREATE SCHEDULE</button>
@@ -76,12 +76,11 @@
                 document.getElementById('classBox'+a).innerHTML = classes[a];
             }
     }
-    function post(params) {
+    function post(params) { //TODO: This is not working and needs to pass the contents of classes[] to /schedules/builders#create
         var path = "/schedules_builders#create"
     var method =  "post";
 
-    // The rest of this code assumes you are not using a library.
-    // It can be made less wordy if you use one.
+ 
     var form = document.createElement("form");
     form.setAttribute("method", method);
     form.setAttribute("action", path);
