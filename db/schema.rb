@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170625031536) do
+ActiveRecord::Schema.define(version: 20170625034052) do
 
   create_table "classtimes", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170625031536) do
   end
 
   create_table "course_schedules", force: :cascade do |t|
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,11 +44,12 @@ ActiveRecord::Schema.define(version: 20170625031536) do
   end
 
   create_table "sfucourses", force: :cascade do |t|
+    t.integer  "course_schedule_id"
     t.text     "name"
     t.text     "times"
     t.text     "campus"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end

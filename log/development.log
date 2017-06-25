@@ -14443,3 +14443,891 @@ Migrating to CreateSfucourses (20170625031536)
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170625031536"]]
   [1m[36m (116.7ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSfucourses (20170625032938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSfucourses (20170625032938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSfucourses (20170625032938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (142.2ms)[0m  [1mCREATE TABLE "classtimes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (91.9ms)[0m  CREATE TABLE "course_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (76.7ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "times" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (75.2ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (83.8ms)[0m  [1mCREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "classes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (75.1ms)[0m  CREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (87.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (75.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (71.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170625031536')[0m
+  [1m[35m (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170623052535')
+  [1m[36m (124.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170623024808')[0m
+  [1m[35m (66.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170622215550')
+  [1m[36m (66.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170614044934')[0m
+  [1m[35m (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170625030151')
+  [1m[36m (66.2ms)[0m  [1mCREATE TABLE "classtimes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (66.8ms)[0m  CREATE TABLE "course_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (83.5ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "times" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (75.1ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (75.3ms)[0m  [1mCREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "classes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (91.9ms)[0m  CREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (92.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (92.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (69.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170625031536')[0m
+  [1m[35m (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170623052535')
+  [1m[36m (108.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170623024808')[0m
+  [1m[35m (99.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170622215550')
+  [1m[36m (66.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170614044934')[0m
+  [1m[35m (83.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170625030151')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSfucourses (20170625032938)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (91.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (75.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateClasstimes (20170614044934)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classtimes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170614044934"]]
+  [1m[35m (84.3ms)[0m  commit transaction
+Migrating to CreateSchedules (20170622215550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170622215550"]]
+  [1m[35m (68.2ms)[0m  commit transaction
+Migrating to CreateCourses (20170623024808)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "times" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623024808"]]
+  [1m[35m (65.7ms)[0m  commit transaction
+Migrating to CreateSchedulesBuilders (20170623052535)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "classes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623052535"]]
+  [1m[35m (73.9ms)[0m  commit transaction
+Migrating to CreateCourseSchedules (20170625030151)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "course_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170625030151"]]
+  [1m[35m (74.0ms)[0m  commit transaction
+Migrating to CreateSfucourses (20170625032938)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170625032938"]]
+  [1m[35m (74.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/course_schedules/" for 127.0.0.1 at 2017-06-24 20:32:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CourseSchedulesController#index as HTML
+  [1m[35mCourseSchedule Load (0.1ms)[0m  SELECT "course_schedules".* FROM "course_schedules"
+  Rendered course_schedules/index.html.erb (1.9ms)
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:32:39 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (44.6ms)
+  Rendered course_schedules/new.html.erb (47.2ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `lable' for #<SimpleForm::FormBuilder:0x005591b4bcc5c8>
+Did you mean?  label):
+     6:   </div>
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.lable :content, "Course" %> <br/>
+    10:   <%= builder.text_area :content, :rows => 3%>
+    11:   <div class="form-actions">
+    12:     
+  app/views/course_schedules/_form.html.erb:9:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_47042148369560'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_47042148369560'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_47042148369560'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (7.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:33:31 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (32.7ms)
+  Rendered course_schedules/new.html.erb (33.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x007fa2a8df2058>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area :content, :rows => 3%>
+    11:   <div class="form-actions">
+    12:     
+    13:     </p>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168297337340'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168297337340'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168297337340'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.8ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:34:09 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (7.5ms)
+  Rendered course_schedules/new.html.erb (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x007fa2a9d45c30>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area :content, :rows => 3=%>
+    11:   <div class="form-actions">
+    12:     
+    13:     </p>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168305383400'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168305383400'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168305383400'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (18.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:35:00 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.7ms)
+  Rendered course_schedules/new.html.erb (9.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x005591b4870b18>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area :content, :rows => 3%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_47042143559260'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_47042143559260'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_47042143559260'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (15.9ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:35:14 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.4ms)
+  Rendered course_schedules/new.html.erb (8.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x007fa2a9baeca0>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_field :content, :rows => 3%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168304382720'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168304382720'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168304382720'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.5ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:35:24 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (0.7ms)
+  Rendered course_schedules/new.html.erb (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:11: syntax error, unexpected '<'
+  <div class="form-actions">    
+   ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:12: syntax error, unexpected '<'
+    </p>
+     ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:14: unknown regexp options - dv
+unmatched close parenthesis: /p>
+    <% end );@output_buffer.safe_append='
+  </i
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:15: unterminated string meets end of file
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:15: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/course_schedules/_form.html.erb:11: syntax error, unexpected '<'
+  app/views/course_schedules/_form.html.erb:12: syntax error, unexpected '<'
+  app/views/course_schedules/_form.html.erb:14: unknown regexp options - dv
+  app/views/course_schedules/_form.html.erb:15: unterminated string meets end of file
+  app/views/course_schedules/_form.html.erb:15: syntax error, unexpected end-of-input, expecting ')'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.2ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:35:57 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.4ms)
+  Rendered course_schedules/new.html.erb (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x007fa2a9eee5a0>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_field :content %>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168306011380'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168306011380'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168306011380'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.4ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:36:05 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (3.3ms)
+  Rendered course_schedules/new.html.erb (3.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_field %>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168298240040'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168298240040'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168298240040'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.9ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:36:15 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.5ms)
+  Rendered course_schedules/new.html.erb (9.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x005591b4b703e0>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_field :content %>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_47042145151440'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_47042145151440'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_47042145151440'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (9.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.9ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:36:22 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (25.7ms)
+  Rendered course_schedules/new.html.erb (26.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `content' for #<#<Class:0x005591b3809ba8>:0x007fa2a90807e8>
+Did you mean?  content_for):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_field content %>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168298032140'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168298032140'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168298032140'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (7.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (15.5ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:37:23 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (0.7ms)
+  Rendered course_schedules/new.html.erb (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+....append=( builder.text_area() :content, rows: 3));@output_bu...
+...                               ^):
+  app/views/course_schedules/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.1ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:37:36 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (1.1ms)
+  Rendered course_schedules/new.html.erb (5.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+....append=( builder.text_area() :content, rows 3));@output_buf...
+...                               ^
+/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/views/course_schedules/_form.html.erb:10: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...er.text_area() :content, rows 3));@output_buffer.safe_append...
+...                               ^):
+  app/views/course_schedules/_form.html.erb:10: syntax error, unexpected ':', expecting ')'
+  app/views/course_schedules/_form.html.erb:10: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.7ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:37:53 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.6ms)
+  Rendered course_schedules/new.html.erb (9.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x005591b2d149c8>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area( :content, rows: 3)%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_47042128729420'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_47042128729420'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_47042128729420'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:38:10 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (8.3ms)
+  Rendered course_schedules/new.html.erb (8.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `text' for #<Sfucourse:0x007fa2a9df5e50>):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area( :text, rows: 3)%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168305550300'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168305550300'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168305550300'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.2ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:38:34 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (5.1ms)
+  Rendered course_schedules/new.html.erb (6.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area(:post, :body, cols: 20, rows: 40)%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_70168302702500'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_70168302702500'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_70168302702500'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:39:13 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (9.6ms)
+  Rendered course_schedules/new.html.erb (10.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `content' for #<Sfucourse:0x005591b4587348>
+Did you mean?  concern):
+     7: <% f.fields_for :sfucourse do |builder| %>
+     8:   <p>
+     9:   <%= builder.label :content, "Course" %> <br/>
+    10:   <%= builder.text_area :content, cols: "30", rows: "10"%>
+    11:   <div class="form-actions">    
+    12:     </p>
+    13:     <% end %>
+  app/views/course_schedules/_form.html.erb:10:in `block (2 levels) in _app_views_course_schedules__form_html_erb__2035876224000579326_47042142099300'
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb__2035876224000579326_47042142099300'
+  app/views/course_schedules/_form.html.erb:1:in `_app_views_course_schedules__form_html_erb__2035876224000579326_47042142099300'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2476346048366616319_47042148628620'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (16.5ms)
+  [1m[36m (118.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (91.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateClasstimes (20170614044934)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classtimes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170614044934"]]
+  [1m[35m (74.9ms)[0m  commit transaction
+Migrating to CreateSchedules (20170622215550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170622215550"]]
+  [1m[35m (82.1ms)[0m  commit transaction
+Migrating to CreateCourses (20170623024808)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "times" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623024808"]]
+  [1m[35m (92.3ms)[0m  commit transaction
+Migrating to CreateSchedulesBuilders (20170623052535)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "classes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623052535"]]
+  [1m[35m (107.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCourseSchedules (20170625034044)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "course_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170625034044"]]
+  [1m[36m (92.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSfucourses (20170625034052)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170625034052"]]
+  [1m[36m (81.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:41:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (27.2ms)
+  Rendered course_schedules/new.html.erb (29.8ms)
+Completed 200 OK in 44ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:45:21 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (10.6ms)
+  Rendered course_schedules/new.html.erb (11.1ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/course_schedules" for 127.0.0.1 at 2017-06-24 20:45:23 -0700
+Processing by CourseSchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kDdUOrTASZ8V5e1b2Mq41d8bPFIHDvEC0EMw7cEPKEJjDGosVAZiM8VxK4G2wxRdw1RtztO/6wn0lUyVBLjj8w==", "commit"=>"Create Course schedule"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "course_schedules" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-06-25 03:45:23.168243"], ["updated_at", "2017-06-25 03:45:23.168243"]]
+  [1m[35m (94.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/course_schedules/1
+Completed 302 Found in 99ms (ActiveRecord: 94.9ms)
+
+
+Started GET "/course_schedules/1" for 127.0.0.1 at 2017-06-24 20:45:23 -0700
+Processing by CourseSchedulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourseSchedule Load (0.2ms)[0m  [1mSELECT  "course_schedules".* FROM "course_schedules" WHERE "course_schedules"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered course_schedules/show.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/course_schedules" for 127.0.0.1 at 2017-06-24 20:45:25 -0700
+Processing by CourseSchedulesController#index as HTML
+  [1m[35mCourseSchedule Load (0.1ms)[0m  SELECT "course_schedules".* FROM "course_schedules"
+  Rendered course_schedules/index.html.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:45:26 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (1.0ms)
+  Rendered course_schedules/new.html.erb (2.2ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:50:57 -0700
+
+SyntaxError (/home/mtodt/code/cmpt276/SFU-Course-Scheduler/app/controllers/course_schedules_controller.rb:76: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/course_schedules_controller.rb:76: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (20.3ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:51:31 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (1.4ms)
+  Rendered course_schedules/new.html.erb (1.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: 
+    3: <%= form_for @ciyrse_schedule do |f| %>
+    4:   <%= f.error_messages %>
+    5:   <p>
+    6:     <%= f.label :name %><br />
+  app/views/course_schedules/_form.html.erb:3:in `_app_views_course_schedules__form_html_erb___4094150124496368238_47404662921440'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2028265945020102890_47404650144580'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (19.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:52:12 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (12.1ms)
+  Rendered course_schedules/new.html.erb (12.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `error_messages' for #<ActionView::Helpers::FormBuilder:0x007fe43d712298>):
+    1: 
+    2: 
+    3: <%= form_for @course_schedule do |f| %>
+    4:   <%= f.error_messages %>
+    5:   <p>
+    6:     <%= f.label :name %><br />
+    7:     <%= f.text_field :name %>
+  app/views/course_schedules/_form.html.erb:4:in `block in _app_views_course_schedules__form_html_erb___4094150124496368238_70309130034840'
+  app/views/course_schedules/_form.html.erb:3:in `_app_views_course_schedules__form_html_erb___4094150124496368238_70309130034840'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2028265945020102890_47404650144580'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (21.0ms)
+
+
+Started GET "/course_schedules/new" for 127.0.0.1 at 2017-06-24 20:52:25 -0700
+Processing by CourseSchedulesController#new as HTML
+  Rendered course_schedules/_form.html.erb (7.8ms)
+  Rendered course_schedules/new.html.erb (8.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<CourseSchedule id: nil, created_at: nil, updated_at: nil>):
+    4: 
+    5:   <p>
+    6:     <%= f.label :name %><br />
+    7:     <%= f.text_field :name %>
+    8:   </p>
+    9:   <%= f.fields_for :sfucourse do |builder| %>
+   10:     <%= render "sfucourse_fields", :f => builder %>
+  app/views/course_schedules/_form.html.erb:7:in `block in _app_views_course_schedules__form_html_erb___4094150124496368238_70309135530660'
+  app/views/course_schedules/_form.html.erb:3:in `_app_views_course_schedules__form_html_erb___4094150124496368238_70309135530660'
+  app/views/course_schedules/new.html.erb:3:in `_app_views_course_schedules_new_html_erb___2028265945020102890_47404650144580'
+
+
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/share/rubygems-integration/all/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/web_console/templates/index.html.erb (17.4ms)
+  [1m[36m (105.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (83.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateClasstimes (20170614044934)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "classtimes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "start_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170614044934"]]
+  [1m[35m (92.2ms)[0m  commit transaction
+Migrating to CreateSchedules (20170622215550)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170622215550"]]
+  [1m[35m (90.6ms)[0m  commit transaction
+Migrating to CreateCourses (20170623024808)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "times" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623024808"]]
+  [1m[35m (74.0ms)[0m  commit transaction
+Migrating to CreateSchedulesBuilders (20170623052535)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "schedules_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "classes" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623052535"]]
+  [1m[35m (73.8ms)[0m  commit transaction
+Migrating to CreateCourseSchedules (20170625034044)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "course_schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170625034044"]]
+  [1m[35m (90.9ms)[0m  commit transaction
+Migrating to CreateSfucourses (20170625034052)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "sfucourses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "course_schedule_id" integer, "name" text, "times" text, "campus" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170625034052"]]
+  [1m[35m (74.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
