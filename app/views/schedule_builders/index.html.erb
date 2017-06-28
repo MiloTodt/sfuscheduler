@@ -1,0 +1,153 @@
+
+
+
+
+
+
+<p> SFU COURSE SCHEDULER</p>
+
+<datalist id="classes">
+    <option value="MACM 201"> 
+    <option value="CMPT 320">
+    <option value="CMPT 300">
+    <option value="CMPT 405">
+    <option value="CMPT 225">
+    <option value="CMPT 307">
+    <option value="CMPT 379">
+    <option value="CMPT 276">
+    <option value="ARCH 131">
+    <option value="HUM 102W">
+    <option value="ARCH 101">
+    <option value="BISC 100">
+    <option value="BPK 100">
+    <option value="HIST 100">
+    <option value="ARCH 300">
+    <option value="ARCH 200">
+    <option value="HUM 100">
+    <option value="CHEM 100">
+    <option value="BIOL 100">
+    <option value="BIOC 100">
+    <option value="MATH 100">
+    <option value="MACM 101"> 
+</datalist>
+<%#<input name="classes" list="classList" />%>
+<datalist id="classList"></datalist>
+
+
+
+<p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
+<form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
+<p id="classBox0" name="class0"></p>
+<p id="classBox1" name="class1"></p>
+<p id="classBox2" name="class2"></p>
+<p id="classBox3" name="class3"></p>
+<p id="classBox4" name="class4"></p>
+<p id="classBox5" name="class5"></p>
+
+</form>
+
+<button onclick="createSchedule()">CREATE SCHEDULE</button>
+
+
+
+<script>
+
+    var classes = [];
+    var classNum = 0;
+    var target = "/schedule_builders/new";
+    
+
+    
+    <!-- Add/Remove will only accept text of the form ex. CMPT 320/IAT 100 -->
+    
+    var reggie = /([A-Z]{4}|[A-Z]{3})(\s{1})([0-9]{3})([A-Z]?)/;
+    
+  
+
+
+    function clearBox() {
+        for (a=0; a <= 5; a++) {
+                classes[a] = "___________";
+                document.getElementById('classBox'+a).innerHTML = "___________";
+            }
+    }
+
+    
+    <!-- Updates the list of classes on screen after each addition or removal -->
+    
+    function showList() {
+        for (a=0; a <= classNum; a++) {
+                document.getElementById('classBox'+a).innerHTML = classes[a];
+            }
+    }
+    function post(params) { //TODO: This is not working and needs to pass the contents of classes[] to /schedules/builders#create
+        var path = "/schedule_builders#create"
+    var method =  "post";
+
+ 
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var i = 0 in classNum) {
+        form.appendChild(classes[i])
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+    
+    
+    <!-- Add new class to array classes and update display on page -->
+    
+    function addClass() {
+
+        var newClass = document.getElementById('tbox').value;
+        
+        if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum <= 6) {
+            classes.unshift(newClass);
+
+            showList();
+            
+            classNum++;
+
+        }
+
+    }
+    
+    
+    
+    <!-- Remove class from array classes and update display on page -->
+    
+    function removeClass() {
+
+        var newClass = document.getElementById('tbox').value;
+
+        if (reggie.test(newClass) && classes.indexOf(newClass) != -1) {
+            var classToRemove = classes.indexOf(newClass);
+            classes.splice(classes.indexOf(newClass), 1);
+            showList();
+            classNum--;
+
+        }
+
+    }
+
+    
+    function createSchedule() {
+      var classesOut = "";
+    var method =  "post";
+    for(var i = 0; i < classNum; i++){
+      classesOut += classes[i];
+       if (i != classNum-1) {classesOut += ",";}
+      
+    }
+    alert(classesOut);
+document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
+document.getElementById("dynForm").submit();
+    }
+
+    window.onload = clearBox;
+
+</script>
+<script>

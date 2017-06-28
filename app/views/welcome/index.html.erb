@@ -17,18 +17,18 @@
     <option value="CMPT 276">
     <option value="ARCH 131">
     <option value="HUM 102W">
-    <%#<option value="ARCH 101">%>
-    <%#<option value="BISC 100">%>
-    <%#<option value="BPK 100">%>
-    <%#<option value="HIST 100">%>
-    <%#<option value="ARCH 300">%>
-    <%#<option value="ARCH 200">%>
-    <%#<option value="HUM 100">%>
-    <%#<option value="CHEM 100">%>
-    <%#<option value="BIOL 100">%>
-    <%#<option value="BIOC 100">%>
-    <%#<option value="MATH 100">%>
-    <%#<option value="MACM 101">       %>
+    <option value="ARCH 101">
+    <option value="BISC 100">
+    <option value="BPK 100">
+    <option value="HIST 100">
+    <option value="ARCH 300">
+    <option value="ARCH 200">
+    <option value="HUM 100">
+    <option value="CHEM 100">
+    <option value="BIOL 100">
+    <option value="BIOC 100">
+    <option value="MATH 100">
+    <option value="MACM 101"> 
 </datalist>
 <%#<input name="classes" list="classList" />%>
 <datalist id="classList"></datalist>
@@ -36,7 +36,7 @@
 
 
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
-<form accept-charset="UTF-8" action="/schedules_builders#new.html" method="post">
+<form accept-charset="UTF-8" action="/schedule_builder#new.html" method="post">
 <p id="classBox0" name="class0"></p>
 <p id="classBox1" name="class1"></p>
 <p id="classBox2" name="class2"></p>
@@ -77,7 +77,7 @@
             }
     }
     function post(params) { //TODO: This is not working and needs to pass the contents of classes[] to /schedules/builders#create
-        var path = "/schedules_builders#create"
+        var path = "/schedule_builders#create"
     var method =  "post";
 
  

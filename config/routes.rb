@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
+  resources :schedule_builders
   get 'data_base/load'
 
   resources :secondary_courses
   resources :secondary_courses
   resources :primary_courses
-  resources :schedules_builders
   resources :courses
   resources :course
   
   resources :schedules
   resources :classtimes
-  get 'welcome/index'
+  get 'schedule_builders/index'
   resources :coursesmt
   
-  root 'welcome#index' #This makes welcome/index the default landing page -Milo
+  root 'schedule_builders#index' #This makes welcome/index the default landing page -Milo
+
+  get 'schedule_builders' => 'schedule_builders'
+post 'schedule_builders/new' => 'schedule_builders#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
