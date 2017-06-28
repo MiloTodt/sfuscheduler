@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Primary Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dept</th>
+      <th>Number</th>
+      <th>Section</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Title</th>
+      <th>Designation</th>
+      <th>Course details</th>
+      <th>Prerequisites</th>
+      <th>Units</th>
+      <th>Term</th>
+      <th>Instructor name</th>
+      <th>Instructor email</th>
+      <th>Short note</th>
+      <th>Delivery method</th>
+      <th>Schedule</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @primary_courses.each do |primary_course| %>
+      <tr>
+        <td><%= primary_course.dept %></td>
+        <td><%= primary_course.number %></td>
+        <td><%= primary_course.section %></td>
+        <td><%= primary_course.name %></td>
+        <td><%= primary_course.description %></td>
+        <td><%= primary_course.title %></td>
+        <td><%= primary_course.designation %></td>
+        <td><%= primary_course.course_details %></td>
+        <td><%= primary_course.prerequisites %></td>
+        <td><%= primary_course.units %></td>
+        <td><%= primary_course.term %></td>
+        <td><%= primary_course.instructor_name %></td>
+        <td><%= primary_course.instructor_email %></td>
+        <td><%= primary_course.short_note %></td>
+        <td><%= primary_course.delivery_method %></td>
+        <td><%= primary_course.schedule %></td>
+        <td><%= link_to 'Show', primary_course %></td>
+        <td><%= link_to 'Edit', edit_primary_course_path(primary_course) %></td>
+        <td><%= link_to 'Destroy', primary_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Primary course', new_primary_course_path %>

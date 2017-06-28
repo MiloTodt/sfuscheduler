@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dept: MyString
+  number: MyString
+  section: MyString
+  name: MyString
+  description: MyString
+  title: MyString
+  designation: MyString
+  course_details: MyText
+  prerequisites: MyString
+  units: MyString
+  term: MyString
+  delivery_method: MyString
+  schedule: MyString
+
+two:
+  dept: MyString
+  number: MyString
+  section: MyString
+  name: MyString
+  description: MyString
+  title: MyString
+  designation: MyString
+  course_details: MyText
+  prerequisites: MyString
+  units: MyString
+  term: MyString
+  delivery_method: MyString
+  schedule: MyString

@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @primary_course.dept %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @primary_course.number %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @primary_course.section %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @primary_course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @primary_course.description %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @primary_course.title %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @primary_course.designation %>
+</p>
+
+<p>
+  <strong>Course details:</strong>
+  <%= @primary_course.course_details %>
+</p>
+
+<p>
+  <strong>Prerequisites:</strong>
+  <%= @primary_course.prerequisites %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @primary_course.units %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @primary_course.term %>
+</p>
+
+<p>
+  <strong>Instructor name:</strong>
+  <%= @primary_course.instructor_name %>
+</p>
+
+<p>
+  <strong>Instructor email:</strong>
+  <%= @primary_course.instructor_email %>
+</p>
+
+<p>
+  <strong>Short note:</strong>
+  <%= @primary_course.short_note %>
+</p>
+
+<p>
+  <strong>Delivery method:</strong>
+  <%= @primary_course.delivery_method %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @primary_course.schedule %>
+</p>
+
+<%= link_to 'Edit', edit_primary_course_path(@primary_course) %> |
+<%= link_to 'Back', primary_courses_path %>

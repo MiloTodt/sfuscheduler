@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'data_base/load'
+
+  resources :secondary_courses
+  resources :secondary_courses
+  resources :primary_courses
   resources :schedules_builders
   resources :courses
   resources :course

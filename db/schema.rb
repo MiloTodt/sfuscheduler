@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170625034052) do
+ActiveRecord::Schema.define(version: 20170628164736) do
 
   create_table "classtimes", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +32,27 @@ ActiveRecord::Schema.define(version: 20170625034052) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "primary_courses", force: :cascade do |t|
+    t.string   "dept"
+    t.string   "number"
+    t.string   "section"
+    t.string   "name"
+    t.string   "description"
+    t.string   "title"
+    t.string   "designation"
+    t.text     "course_details"
+    t.string   "prerequisites"
+    t.string   "units"
+    t.string   "term"
+    t.string   "instructor_name"
+    t.string   "instructor_email"
+    t.string   "short_note"
+    t.string   "delivery_method"
+    t.string   "schedule"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,6 +62,25 @@ ActiveRecord::Schema.define(version: 20170625034052) do
     t.string   "classes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "secondary_courses", force: :cascade do |t|
+    t.string   "dept"
+    t.string   "number"
+    t.string   "section"
+    t.string   "name"
+    t.string   "description"
+    t.string   "title"
+    t.string   "designation"
+    t.text     "course_details"
+    t.string   "prerequisites"
+    t.string   "units"
+    t.string   "term"
+    t.string   "delivery_method"
+    t.string   "schedule"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "primary_course_id"
   end
 
   create_table "sfucourses", force: :cascade do |t|

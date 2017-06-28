@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Secondary Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dept</th>
+      <th>Number</th>
+      <th>Section</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Title</th>
+      <th>Designation</th>
+      <th>Course details</th>
+      <th>Prerequisites</th>
+      <th>Units</th>
+      <th>Term</th>
+      <th>Delivery method</th>
+      <th>Schedule</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secondary_courses.each do |secondary_course| %>
+      <tr>
+        <td><%= secondary_course.dept %></td>
+        <td><%= secondary_course.number %></td>
+        <td><%= secondary_course.section %></td>
+        <td><%= secondary_course.name %></td>
+        <td><%= secondary_course.description %></td>
+        <td><%= secondary_course.title %></td>
+        <td><%= secondary_course.designation %></td>
+        <td><%= secondary_course.course_details %></td>
+        <td><%= secondary_course.prerequisites %></td>
+        <td><%= secondary_course.units %></td>
+        <td><%= secondary_course.term %></td>
+        <td><%= secondary_course.delivery_method %></td>
+        <td><%= secondary_course.schedule %></td>
+        <td><%= link_to 'Show', secondary_course %></td>
+        <td><%= link_to 'Edit', edit_secondary_course_path(secondary_course) %></td>
+        <td><%= link_to 'Destroy', secondary_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Secondary course', new_secondary_course_path %>

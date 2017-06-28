@@ -1,0 +1,23 @@
+<%= simple_form_for(@secondary_course) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :dept %>
+    <%= f.input :number %>
+    <%= f.input :section %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :title %>
+    <%= f.input :designation %>
+    <%= f.input :course_details %>
+    <%= f.input :prerequisites %>
+    <%= f.input :units %>
+    <%= f.input :term %>
+    <%= f.input :delivery_method %>
+    <%= f.input :schedule %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

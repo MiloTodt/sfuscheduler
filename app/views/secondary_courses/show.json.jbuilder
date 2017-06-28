@@ -1,0 +1,1 @@
+json.extract! @secondary_course, :id, :dept, :number, :section, :name, :description, :title, :designation, :course_details, :prerequisites, :units, :term, :delivery_method, :schedule, :created_at, :updated_at

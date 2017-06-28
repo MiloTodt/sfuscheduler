@@ -30,6 +30,8 @@ gem 'autoprefixer-rails'
 gem 'simple_form'
 gem 'bootstrap'
 
+gem 'httparty' # for making requests to SFU API
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
