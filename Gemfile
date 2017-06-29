@@ -5,6 +5,7 @@ gem 'calendar_helper', '~> 0.2.6' #for displaying calendar
 gem 'rails', '4.2.7.1'
 gem 'nokogiri'
 gem 'gon'
+gem 'tzinfo-data', :platforms => [:mswin, :mingw]
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
