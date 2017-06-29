@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 20170628203317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "course_schedules", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.text     "times"
@@ -68,12 +63,6 @@ ActiveRecord::Schema.define(version: 20170628203317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "schedules_builders", force: :cascade do |t|
-    t.string   "classes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "secondary_courses", force: :cascade do |t|
     t.string   "dept"
     t.string   "number"
@@ -91,15 +80,6 @@ ActiveRecord::Schema.define(version: 20170628203317) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "primary_course_id"
-  end
-
-  create_table "sfucourses", force: :cascade do |t|
-    t.integer  "course_schedule_id"
-    t.text     "name"
-    t.text     "times"
-    t.text     "campus"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
   end
 
 end
