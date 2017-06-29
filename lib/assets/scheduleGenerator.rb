@@ -37,6 +37,8 @@ END_TIMES = {"920" => 0, "1020" => 1, "1120" => 2, "1220"=>3, "1320"=>4,
 "1420"=>5, "1520"=>6, "1620"=>7, "1720"=>8, "1820"=>9, "1920"=>10, 
 "2020"=>11, "2120"=>12}
 
+DEFAULT_SYM = '.'
+
 #=====================================================================
 # Day Class
 #=====================================================================
@@ -45,7 +47,7 @@ class Day
 		@name = name
 		@hours = []
 		HOURS.length.times do 
-			@hours << 0
+			@hours << DEFAULT_SYM
 		end
 	end
 
@@ -63,7 +65,7 @@ class Day
 		clone.replace(@hours)
 		starting = START_TIMES[start_t]
 		duration = END_TIMES[end_t] - starting
-		if @hours[starting] == 0
+		if @hours[starting] == DEFAULT_SYM
 			@hours[starting] = symbol
 		else
 			@hours.replace(clone)
@@ -71,7 +73,7 @@ class Day
 		end
 		starting += 1
 		duration.times do |cur_hour|
-			if @hours[cur_hour+starting] == 0
+			if @hours[cur_hour+starting] == DEFAULT_SYM
 				@hours[cur_hour+starting] = symbol
 			else
 				@hours.replace(clone)
@@ -484,7 +486,7 @@ class Scheduler
 			tmp[i][1].length.times do |j|
 				cur_week.addCourse(tmp[i][1][j], j+1)
 			end
-			puts "Empty slot = 0"
+			puts "Empty slot = ."
 			num_courses.times do |j|
 				puts "#{tmp[i][1][j].getName} = #{j+1}"
 			end
