@@ -1,7 +1,7 @@
 YEAR = '2017'.freeze    # a year to check the courses in
 TERM = 'fall'.freeze  # a term to check the courses in
 BASIC_API_URL = "http://www.sfu.ca/bin/wcm/course-outlines?#{YEAR}/#{TERM}/".freeze  # API Url
-BUGGED_DEPARTMENTS = %w[BOT WDA DEVS FPA WCM].freeze # SFU API returns some departments that actually don't have courses (so fetching them returns an error), this is a list of them
+BUGGED_DEPARTMENTS = %w[BOT WDA DEVS FPA WCM SCD].freeze # SFU API returns some departments that actually don't have courses (so fetching them returns an error), this is a list of them
 
 # @param [String] url - url to fetch
 # @return [Hash] - response (only gets returned if response does not contain an error specified by SFU API Docs)
