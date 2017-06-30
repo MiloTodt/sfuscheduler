@@ -34,8 +34,8 @@ courses = [
 ]
 
 test = Scheduler.new(courses)
-number_of_courses = 3		# change this number from 1-6 to get schedules of that amount
-number_of_schedules = 2		# returns the number of schedules or less
+number_of_courses = 6		# change this number from 1-6 to get schedules of that amount
+number_of_schedules = 1		# returns the number of schedules or less
 prioritized = true			# true => returns in order of highest priority, false=> priority doesn't matter
 tmp = test.getSchedule(number_of_courses, number_of_schedules, prioritized)	# prints our array of schedules lead by their priority number
 
