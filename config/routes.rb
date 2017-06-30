@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :schedule_builders
   get 'data_base/load'
+  get 'data_base/loadCourses'
 
   resources :secondary_courses
   resources :secondary_courses
