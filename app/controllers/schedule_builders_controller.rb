@@ -35,8 +35,12 @@ class ScheduleBuildersController < ApplicationController
     end 
 
   @matches.each do |x| #builds the time array, regex black magic
-    @times.push x[/\%(.*)/,1]
+    @times.push (x[/\%(.*)/,1])
    end
+   
+   (@times.size()-1).times do |i| @times[i] = @times[i].split(";") end
+ 
+    
 
     #there's a one to one coorespondance between the arrays
     #@names[1] will map to @times[1] so you can itterate through both and have them match.
