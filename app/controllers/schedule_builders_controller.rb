@@ -17,9 +17,24 @@ class ScheduleBuildersController < ApplicationController
     @schedule_builder = ScheduleBuilder.new(schedule_builder_params)
 
 
-        @classes= [params[:classes].split(",")]
+    @classes = [params[:classes].split(",")]
+    @classes.flatten!
+
+    times = File.readlines('coursetimes.txt')
+    @matches = []
+    @classes.each do |course|
+      @matches += times.select { |name| name[/#{course}/i] }
+    end
+    @names = Array.new()
+    @times = Array.new()
+    @matches.each do |entry|
+      entry.slice!("\n") #removes new line
+      entry = entry.split("%")
+	    @names.push entry[0]
+      end
 
 
+    #course names+number regex [A-Z]\w{3,}[ ][0-9]{3}
   end
 
 
