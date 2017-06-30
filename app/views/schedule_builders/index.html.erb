@@ -115,7 +115,7 @@
         }
 
         alert(classesOut);
-        document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value=' + classesOut + '></form>';
+        document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
         document.getElementById("dynForm").submit();
     }
 
