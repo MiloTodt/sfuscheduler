@@ -30,7 +30,6 @@
 
 
 <script>
-
     var classes = [];
     var classNum = 0;
     var target = "/schedule_builders/new";
@@ -46,9 +45,9 @@
 
     function clearBox() {
         for (a=0; a <= 5; a++) {
-                classes[a] = "___________";
-                document.getElementById('classBox'+a).innerHTML = "___________";
-            }
+            classes[a] = "___________";
+            document.getElementById('classBox'+a).innerHTML = "___________";
+        }
     }
 
     
@@ -56,31 +55,30 @@
     
     function showList() {
         for (a=0; a <= classNum; a++) {
-                document.getElementById('classBox'+a).innerHTML = classes[a];
-            }
+            document.getElementById('classBox'+a).innerHTML = classes[a];
+        }
     }
+
     function post(params) { //TODO: This is not working and needs to pass the contents of classes[] to /schedules/builders#create
         var path = "/schedule_builders/new"
-    var method =  "post";
+        var method =  "post";
 
- 
-    var form = document.createElement("form");
-    form.setAttribute("method", method);
-    form.setAttribute("action", path);
+        var form = document.createElement("form");
+        form.setAttribute("method", method);
+        form.setAttribute("action", path);
 
-    for(var i = 0 in classNum) {
-        form.appendChild(classes[i])
+        for(var i = 0 in classNum) {
+            form.appendChild(classes[i])
+        }
+
+        document.body.appendChild(form);
+        form.submit();
     }
-
-    document.body.appendChild(form);
-    form.submit();
-}
     
     
     <!-- Add new class to array classes and update display on page -->
     
     function addClass() {
-
         var newClass = document.getElementById('tbox').value;
         
         if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum <= 6) {
@@ -89,9 +87,7 @@
             showList();
             
             classNum++;
-
         }
-
     }
     
     
@@ -99,7 +95,6 @@
     <!-- Remove class from array classes and update display on page -->
     
     function removeClass() {
-
         var newClass = document.getElementById('tbox').value;
 
         if (reggie.test(newClass) && classes.indexOf(newClass) != -1) {
@@ -107,27 +102,24 @@
             classes.splice(classes.indexOf(newClass), 1);
             showList();
             classNum--;
-
         }
-
     }
 
     
     function createSchedule() {
-      var classesOut = "";
-    var method =  "post";
-    for(var i = 0; i < classNum; i++){
-      classesOut += classes[i];
-       if (i != classNum) {classesOut += ",";}
-      
-    }
-    alert(classesOut);
-document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value=' + classesOut + '></form>';
-document.getElementById("dynForm").submit();
+        var classesOut = "";
+        var method =  "post";
+        for(var i = 0; i < classNum; i++){
+          classesOut += classes[i];
+          if (i != classNum) {classesOut += ",";}
+        }
+
+        alert(classesOut);
+        document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value=' + classesOut + '></form>';
+        document.getElementById("dynForm").submit();
     }
 
     window.onload = clearBox;
-
 </script>
 <script>
 
