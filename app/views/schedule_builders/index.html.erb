@@ -14,7 +14,7 @@
 
 
 
-<p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVEdd</button></p>
+<p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
 <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
 <p id="classBox0" name="class0"></p>
 <p id="classBox1" name="class1"></p>
@@ -121,7 +121,6 @@
        if (i != classNum-1) {classesOut += ",";}
       
     }
-    alert(classesOut);
 document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
 document.getElementById("dynForm").submit();
     }

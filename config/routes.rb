@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :schedules
   resources :classtimes
   get 'schedule_builders/index'
+  get 'schedule_builders/makeSchedules'
   resources :coursesmt
   
   root 'schedule_builders#index' #This makes welcome/index the default landing page -Milo

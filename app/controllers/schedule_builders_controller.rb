@@ -14,8 +14,14 @@ class ScheduleBuildersController < ApplicationController
 
   # GET /schedule_builders/new
   def new
-    @schedule_builder = ScheduleBuilder.new
+    @schedule_builder = ScheduleBuilder.new(schedule_builder_params)
+
+
+        @classes= [params[:classes].split(",")]
+
+
   end
+
 
   # GET /schedule_builders/1/edit
   def edit
