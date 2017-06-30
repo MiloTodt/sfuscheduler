@@ -25,6 +25,7 @@ class ScheduleBuildersController < ApplicationController
     @classes.each do |course|
       @matches += times.select { |name| name[/#{course}/i] }
     end
+
     @names = Array.new()
     @times = Array.new()
 
@@ -35,12 +36,47 @@ class ScheduleBuildersController < ApplicationController
     end 
 
   @matches.each do |x| #builds the time array, regex black magic
-    @times.push (x[/\%(.*)/,1])
+    @times.push x[/\%(.*)/,1]
    end
+
+# TO BE CONTINUED
+  tmp = []
+   (@names.size()-1).times do |i| @times[i] = @times[i].split(";") end
+   @courseOut = []
+   @names.size.times { |i|
+      course = []
+      tmp = []
+      dummy = []
+      dummy << @names[i]
+      dummy << 0 # changed to priority setting inputted by user at a later date
+      temp = []
+       if @times[i].class != String then  @times[i].size.times do  |j| temp <<  @times[i][j].split(",") end else temp << @times[i] end
+         dummy << temp
+      dummy << []
+      @courseOut << dummy
+      # @times.length.times { |j|
+      #   tmp2 = []
+      #   if @times[j].Class == String 
+      #     tmp2 << times[j]
+      #   else
+      #     @times[j].each |time| temp2 << times[time] end
+      #   end }
+        
+      } 
+
+#@times = [
+ # ["Mo,10:30,11:20,Burnaby", "We,10:30,11:20,Burnaby", "Fr,10:30,11:20,Burnaby"], 
+ # ["Mo,14:30,15:20,Burnaby", "We,14:30,15:20,Burnaby", "Fr,14:30,15:20,Burnaby"], 
+ # "Tu,11:30,14:20,Burnaby"
+#]
+
+
+
    
-   (@times.size()-1).times do |i| @times[i] = @times[i].split(";") end #splits courses with multiple days into an array of times
+   #["course_name_12", highest, [["M", "1830" , "1920", "Burnaby"],	["W", "1830" , "1920", "Burnaby"], 	["F", "1830" , "1920", "Burnaby"]], [] ],
+# TO BE CONTINUED
    
-    
+   
 
     #there's a one to one coorespondance between the arrays
     #@names[1] will map to @times[1] so you can itterate through both and have them match.
