@@ -118,15 +118,11 @@
     var method =  "post";
     for(var i = 0; i < classNum; i++){
       classesOut += classes[i];
-       if (i != classNum) {classesOut += ",";
+       if (i != classNum) {classesOut += ",";}
       
     }
-<<<<<<< HEAD
     alert(classesOut);
 document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders#create" method="get"><input type="hidden" name="classes" value=' + classesOut + '></form>';
-=======
-document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
->>>>>>> cf693567989137d0e8490fbce97633a4c826b9bf
 document.getElementById("dynForm").submit();
     }
 
