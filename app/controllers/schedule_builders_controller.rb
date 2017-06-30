@@ -27,11 +27,18 @@ class ScheduleBuildersController < ApplicationController
     end
     @names = Array.new()
     @times = Array.new()
-    @matches.each do |entry|
+
+    @matches.each do |entry| #builds name array, done this way to check for multiple entries.
       entry.slice!("\n") #removes new line
       entry = entry.split("%")
 	    @names.push entry[0]
-      end
+    end 
+
+  @matches.each do |x| 
+    @times.push x[/\%(.*)/,1]
+   end
+
+    
 
 
     #course names+number regex [A-Z]\w{3,}[ ][0-9]{3}
