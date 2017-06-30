@@ -39,7 +39,7 @@ class ScheduleBuildersController < ApplicationController
    end
    
    (@times.size()-1).times do |i| @times[i] = @times[i].split(";") end #splits courses with multiple days into an array of times
- 
+   
     
 
     #there's a one to one coorespondance between the arrays
