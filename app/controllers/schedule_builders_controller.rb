@@ -37,9 +37,14 @@ class ScheduleBuildersController < ApplicationController
   @matches.each do |x| #builds the time array, regex black magic
     @times.push (x[/\%(.*)/,1])
    end
+<<<<<<< HEAD
+(@times.size()-1).times do |i| @times[i] = @times[i].split(";") end
+
+=======
    
    (@times.size()-1).times do |i| @times[i] = @times[i].split(";") end #splits courses with multiple days into an array of times
    
+>>>>>>> 1c23777cdb2e8e082df299bb6fdc0a800484f1e5
     
 
     #there's a one to one coorespondance between the arrays
