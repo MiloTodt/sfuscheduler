@@ -456,6 +456,25 @@ class Schedulers
 		@courses
 	end
 
+	def get1
+		@oneCourse
+	end
+	def get2
+		@twoCourses
+	end
+	def get3
+		@threeCourses
+	end
+	def get4
+		@fourCourses
+	end
+	def get5
+		@fiveCourses
+	end
+	def get6
+		@sixCourses
+	end
+
 	def getSchedule(num_courses, num_schedules, prioritized)
 		if num_courses > MAX_COURSES_PER_SCHEDULE or num_schedules > MAX_SCHEDULES_MADE or @num_courses == 0
 			return []
@@ -573,11 +592,24 @@ class ScheduleBuildersController < ApplicationController
       #     @times[j].each |time| temp2 << times[time] end
       #   end }
         
-      } 
+      }
+		###########################################################
       sched = Schedulers.new(@courseOut)
-      maxlength = 0
-      @names.uniq{|x| maxlength+=1}
-      num_courses = maxlength == 1 ? maxlength : maxlength-1
+			maxlength = 0
+			if sched.get6 != []
+				maxlength = sched.get6.length
+			elsif sched.get5 != []
+				maxlength = sched.get5.length
+			elsif sched.get4 != []
+				maxlength = sched.get4.length
+			elsif sched.get3 != []
+				maxlength = sched.get3.length
+			elsif sched.get2 != []
+				maxlength = sched.get2.length
+			elsif sched.get1 != []
+				maxlength = sched.get1.length
+			end
+      num_courses = maxlength
       num_schedules = 1 # user should be bale to change
       @output = sched.printSchedule(num_courses, num_schedules)
       
