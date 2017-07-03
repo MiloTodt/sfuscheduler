@@ -13,7 +13,6 @@
 <datalist id="classList"></datalist>
 
 
-
 <p><input type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> <button onclick="addClass()">ADD</button> <button onclick="removeClass()">REMOVE</button></p>
 <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
 <p id="classBox0" name="class0"></p>
@@ -27,23 +26,17 @@
 
 <button onclick="createSchedule()">CREATE SCHEDULE</button>
 
-
-
 <script>
 
     var classes = [];
     var classNum = 0;
     var target = "/schedule_builders/new";
     
-
-    
     <!-- Add/Remove will only accept text of the form ex. CMPT 320/IAT 100 -->
     
     var reggie = /([A-Z]{4}|[A-Z]{3})(\s{1})([0-9]{3})([A-Z]?)/;
     
   
-
-
     function clearBox() {
         for (a=0; a <= 5; a++) {
                 classes[a] = "___________";
@@ -51,7 +44,6 @@
             }
     }
 
-    
     <!-- Updates the list of classes on screen after each addition or removal -->
     
     function showList() {
@@ -76,7 +68,6 @@
     form.submit();
 }
     
-    
     <!-- Add new class to array classes and update display on page -->
     
     function addClass() {
@@ -85,16 +76,10 @@
         
         if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum <= 6) {
             classes.unshift(newClass);
-
             showList();
-            
             classNum++;
-
         }
-
     }
-    
-    
     
     <!-- Remove class from array classes and update display on page -->
     
@@ -107,12 +92,9 @@
             classes.splice(classes.indexOf(newClass), 1);
             showList();
             classNum--;
-
         }
-
     }
 
-    
     function createSchedule() {
       var classesOut = "";
     var method =  "post";
@@ -128,7 +110,6 @@ document.getElementById("dynForm").submit();
     }
 
     window.onload = clearBox;
-
 </script>
-<script>
+
 
