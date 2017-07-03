@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :course
   
   resources :schedules
-  resources :classtimes
   get 'schedule_builders/index'
   get 'schedule_builders/makeSchedules'
   resources :coursesmt
