@@ -567,30 +567,19 @@ class ScheduleBuildersController < ApplicationController
     @times.push x[/\%(.*)/,1]
    end
 
-# TO BE CONTINUED
-  tmp = []
-   (@names.size()).times do |i| @times[i] = @times[i].split(";") end
+   (@names.size()).times do |i| @times[i] = @times[i].split(";") end #times are split by ; in the database, converts them to an array.
    @courseOut = []
    @names.size.times { |i|
       course = []
-      tmp = []
       dummy = []
       dummy << @names[i]
       dummy << 0 # changed to priority setting inputted by user at a later date
       temp = []
-       if @times[i].class != String then  @times[i].size.times do  |j| temp <<  @times[i][j].split(",") end else temp << @times[i] end
+       if @times[i].class != String then  @times[i].size.times do  |j| temp <<  @times[i][j].split(",") end else temp << @times[i] end #gross one liner but formats string for class input -Milo
          dummy << temp
       dummy << []
       @courseOut << dummy
 
-
-      # @times.length.times { |j|
-      #   tmp2 = []
-      #   if @times[j].Class == String 
-      #     tmp2 << times[j]
-      #   else
-      #     @times[j].each |time| temp2 << times[time] end
-      #   end }
         
       }
 		###########################################################
