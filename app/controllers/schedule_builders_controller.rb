@@ -82,7 +82,6 @@ class Day
 		end
 		return true
 	end
-
 end
 
 #=================================================================
@@ -145,8 +144,6 @@ class Week
     output += "</pre>"
       return output
 	end
-
-
 end
 
 
@@ -294,11 +291,7 @@ Co-Req:\t#{@co_req}
 Pre-Req:\t#{@pre_req}
 		"
 	end
-
-
 end
-
-
 
 #=================================================================
 # Schedulers Class
@@ -391,7 +384,7 @@ class Schedulers
 			end
 			self.validateCoReq
 		end
-	end
+	end #end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end end
 
 	# make sure all schedules meet the co-requisite requirements
 	def validateCoReq
@@ -518,13 +511,7 @@ class Schedulers
 		end
     return output
 	end 
-
-
-
 end
-
-
-
 
 class ScheduleBuildersController < ApplicationController
   before_action :set_schedule_builder, only: [:show, :edit, :update, :destroy]
@@ -579,8 +566,6 @@ class ScheduleBuildersController < ApplicationController
          dummy << temp
       dummy << []
       @courseOut << dummy
-
-        
       }
 		###########################################################
       sched = Schedulers.new(@courseOut)
@@ -599,33 +584,12 @@ class ScheduleBuildersController < ApplicationController
 				maxlength = sched.get1.length
 			end
       num_courses = maxlength
-      num_schedules = 1 # user should be bale to change
+      num_schedules = 1 # user should be able to change
       @output = sched.printSchedule(num_courses, num_schedules)
-      
-      
-      
-      
-#@times = [
- # ["Mo,10:30,11:20,Burnaby", "We,10:30,11:20,Burnaby", "Fr,10:30,11:20,Burnaby"], 
- # ["Mo,14:30,15:20,Burnaby", "We,14:30,15:20,Burnaby", "Fr,14:30,15:20,Burnaby"], 
- # "Tu,11:30,14:20,Burnaby"
-#]
-
-
-
    
-   #["course_name_12", highest, [["M", "1830" , "1920", "Burnaby"],	["W", "1830" , "1920", "Burnaby"], 	["F", "1830" , "1920", "Burnaby"]], [] ],
-# TO BE CONTINUED
-   
-   
-
     #there's a one to one coorespondance between the arrays
     #@names[1] will map to @times[1] so you can itterate through both and have them match.
-
-
-    #course names+number regex [A-Z]\w{3,}[ ][0-9]{3}
   end
-
 
   # GET /schedule_builders/1/edit
   def edit
