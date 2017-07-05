@@ -13,12 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20170628203317) do
 
-  create_table "classtimes", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"

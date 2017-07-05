@@ -568,24 +568,24 @@ class ScheduleBuildersController < ApplicationController
       @courseOut << dummy
       }
 		###########################################################
-      sched = Schedulers.new(@courseOut)
-			maxlength = 0
-			if sched.get6 != []
-				maxlength = sched.get6.length
-			elsif sched.get5 != []
-				maxlength = sched.get5.length
-			elsif sched.get4 != []
-				maxlength = sched.get4.length
-			elsif sched.get3 != []
-				maxlength = sched.get3.length
-			elsif sched.get2 != []
-				maxlength = sched.get2.length
-			elsif sched.get1 != []
-				maxlength = sched.get1.length
-			end
-      num_courses = maxlength
-      num_schedules = 1 # user should be able to change
-      @output = sched.printSchedule(num_courses, num_schedules)
+    #   sched = Schedulers.new(@courseOut)
+	# 		maxlength = 0
+	# 		if sched.get6 != []
+	# 			maxlength = sched.get6.length
+	# 		elsif sched.get5 != []
+	# 			maxlength = sched.get5.length
+	# 		elsif sched.get4 != []
+	# 			maxlength = sched.get4.length
+	# 		elsif sched.get3 != []
+	# 			maxlength = sched.get3.length
+	# 		elsif sched.get2 != []
+	# 			maxlength = sched.get2.length
+	# 		elsif sched.get1 != []
+	# 			maxlength = sched.get1.length
+	# 		end
+    #   num_courses = maxlength
+    #   num_schedules = 1 # user should be able to change
+    #   @output = sched.printSchedule(num_courses, num_schedules)
    
     #there's a one to one coorespondance between the arrays
     #@names[1] will map to @times[1] so you can itterate through both and have them match.
