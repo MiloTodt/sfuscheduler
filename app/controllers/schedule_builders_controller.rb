@@ -37,7 +37,7 @@ END_TIMES = {"920" => 0, "1020" => 1, "1120" => 2, "1220"=>3, "1320"=>4,
 "1420"=>5, "1520"=>6, "1620"=>7, "1720"=>8, "1820"=>9, "1920"=>10, 
 "2020"=>11, "2120"=>12}
 
-DEFAULT_SYM = '.'
+DEFAULT_SYM = '********'
 
 #=====================================================================
 # Day Class
@@ -122,25 +122,34 @@ class Week
 
 # for debug purposes
 	def printWeek()
-    output = "<pre>"
-		output += "<p>TIMES&#9;"
+		breakline = '+=======+=========+=========+=========+=========+=========+=========+=========+'
+    	breathe = "       "
+    	output = "<pre>"
+    	output += breakline
+		output += "<br>|TIMES&#9;|"
 		WEEK.length.times do |day|
-			output += "#{@days[day].getName()}&#9;"
+			if @days[day].getName().length == 2
+				output += "#{@days[day].getName()}#{breathe}|"
+			else
+				output += "#{@days[day].getName()}#{breathe} |"
+			end
 		end
-		output += '<p>'
+		output += '<br>'
+		output += breakline
+		output += '<br>'
 		HOURS.length.times do |hour|
 			cur_hour = HOURS[hour]
-			output += "#{cur_hour}&#9;"			
+			output += "|#{cur_hour}&#9;|"			
 			#if cur_hour == "830" or cur_hour == "930"
 			#	output += ""
 			#end
 			WEEK.length.times do |day|
 				cur_day = @days[day]
-				output+= "#{cur_day.getHour(cur_hour)}&#9;"
+				output+= "#{cur_day.getHour(cur_hour)} |"
 			end
-			output += '<p>'
+			output += '<br>'
 		end
-
+		output += breakline
     output += "</pre>"
       return output
 	end
@@ -496,15 +505,14 @@ class Schedulers
 		end
     output = ""
 		num_schedules.times do |i|
-			output += "<p>Schedule #{i+1}<p>"
+			output += "<p>SCHEDULE #{i+1}<p>"
 			tmp = @courseTable[num_courses].sort{|a, b| a[0] <=>b[0]}
 			cur_week = Week.new()
 			tmp[i][1].length.times do |j|
-				cur_week.addCourse(tmp[i][1][j], j+1)
+				cur_week.addCourse(tmp[i][1][j], tmp[i][1][j].getName)
 			end
-			output += "Empty slot = .<p>"
 			num_courses.times do |j|
-				output += "#{tmp[i][1][j].getName} = #{j+1}<p>"
+				output += "#{tmp[i][1][j].getName}&#9;| "
 			end
 			output += cur_week.printWeek
       output += "<p>"
