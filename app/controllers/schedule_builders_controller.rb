@@ -35,7 +35,10 @@ START_TIMES = {"830" => 0, "930" => 1, "1030" => 2, "1130"=>3, "1230"=>4,
 
 END_TIMES = {"920" => 0, "1020" => 1, "1120" => 2, "1220"=>3, "1320"=>4,
 "1420"=>5, "1520"=>6, "1620"=>7, "1720"=>8, "1820"=>9, "1920"=>10, 
-"2020"=>11, "2120"=>12}
+"2020"=>11, "2120"=>12, 
+"950" => 1, "1050" => 2, "1150" => 3, "1250"=>4, "1325"=>5,
+"1450"=>6, "1550"=>7, "1650"=>8, "1750"=>9, "1850"=>10, "1950"=>11, 
+"2050"=>12, "2150"=>12}
 
 DEFAULT_SYM = '********'
 
@@ -63,6 +66,16 @@ class Day
 		# clone day incase it fails
 		clone = []
 		clone.replace(@hours)
+		#### Change times that start and end to 30 and 20 respectively
+		if start_t[-2] != '3' 
+			start_t[-2] = '3'
+		end
+		if end_t[-2]  != '2'
+			tmp = end_t[-3].to_i + 1
+			tmp = tmp.to_s
+			end_t[-3] = tmp
+			end_t[-2] = '2'
+		end
 		starting = START_TIMES[start_t]
 		duration = END_TIMES[end_t] - starting
 		if @hours[starting] == DEFAULT_SYM
@@ -145,7 +158,11 @@ class Week
 			#end
 			WEEK.length.times do |day|
 				cur_day = @days[day]
-				output+= "#{cur_day.getHour(cur_hour)} |"
+				if cur_day.getHour(cur_hour).length == 8
+					output+= "#{cur_day.getHour(cur_hour)} |"
+				else
+					output+= "#{cur_day.getHour(cur_hour)}|"
+				end
 			end
 			output += '<br>'
 		end
@@ -167,6 +184,7 @@ class Course
 		@conflicts = []
 		@co_req = []
 		@pre_req = []
+		@dupes = name[0..8]
 		if dates.length > 0
 			dates.each do |date|
 				@dates << date
@@ -188,7 +206,7 @@ class Course
 	end
 
 	def ==(course)
-		if @name == course.getName 
+		if @name[0..8] == course.getName[0..8] # for section number 
 			return true
 		end
 		return false
@@ -216,9 +234,8 @@ class Course
 
 	# check if self has conflict location, time, or pre-requisite conflict with course
 	def checkConflict(course)
-		if  self.notDupe(course) and 
-		( (self.checkLocationConflict(course) or self.checkTimeConflict(course)) or 
-		@pre_req.include? course.getName[0...course.getName.length-5] ) 
+		if ( (self.checkLocationConflict(course) or self.checkTimeConflict(course) or 
+		@pre_req.include? course.getName[0..8] ) and self.notDupe(course) ) and course.getName[0..8] != @dupes
 			@conflicts << course
 			course.checkConflict(self)	# if conflict exists, make sure that both self and conflicting course exists in each others conflicts
 		end
@@ -227,10 +244,8 @@ class Course
 
 	# check if comparing with self or if already in conflicts
 	def notDupe(course)
-		if not self == course 
-			if not self.inConflict(course)
-				return true
-			end
+		if not self.inConflict(course)
+			return true
 		end
 		return false
 	end
@@ -238,7 +253,7 @@ class Course
 	# check if course is in @conflicts
 	def inConflict(course)
 		@conflicts.each do |conflict|
-			if conflict == course or course.getName.include? conflict.getName 
+			if conflict.getName == course.getName or course.getName.include? conflict.getName 
 				return true
 			end
 		end
@@ -509,7 +524,7 @@ class Schedulers
 			tmp = @courseTable[num_courses].sort{|a, b| a[0] <=>b[0]}
 			cur_week = Week.new()
 			tmp[i][1].length.times do |j|
-				cur_week.addCourse(tmp[i][1][j], tmp[i][1][j].getName)
+				cur_week.addCourse(tmp[i][1][j], tmp[i][1][j].getName[0..8])
 			end
 			num_courses.times do |j|
 				output += "#{tmp[i][1][j].getName}&#9;| "
@@ -520,6 +535,10 @@ class Schedulers
     return output
 	end 
 end
+
+#=================================================================
+# ScheduleBuildersController Class
+#=================================================================
 
 class ScheduleBuildersController < ApplicationController
   before_action :set_schedule_builder, only: [:show, :edit, :update, :destroy]
@@ -575,8 +594,8 @@ class ScheduleBuildersController < ApplicationController
       dummy << []
       @courseOut << dummy
       }
-		###########################################################
-		# makes the code works
+############################################################################################
+# makes the code works
       sched = Schedulers.new(@courseOut)
 			maxlength = 0
 			if sched.get6 != []
