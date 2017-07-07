@@ -620,10 +620,12 @@ class ScheduleBuildersController < ApplicationController
   		val = false
   		while looking 
   			if sched.getScheduleOf(userIn) != []
+
   				@output += "SCHEUDLE OF #{userIn} COURSE(S) FOUND"
   				num_courses = userIn
   				num_schedules = sched.getScheduleOf(num_courses).length
   				looking = false
+  				#@output += "DEBUG...#{sched.getSchedule(num_courses, num_schedules, true)}"
   				val = true
   			else
   				userIn -= 1
