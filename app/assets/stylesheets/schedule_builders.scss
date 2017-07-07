@@ -1,3 +1,51 @@
 // Place all the styles related to the schedule_builders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #c73605;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.select {
+  width: 40%;
+  padding-top: 20px;
+  padding-left: 20px;
+  float: left;
+  
+}
+
+.info {
+  width: 40%;
+  padding: 10px;
+  float: right;
+}
+
+.footer {
+  border: 1px solid black;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #c73605;
+}
+
+.display {
+  padding: 30px;
+  font-size: 20px;
+  font-style: oblique;
+}
+
+li {
+    font-size: 25px;
+    padding: 10px;
+    line-height: 110%;
+}
