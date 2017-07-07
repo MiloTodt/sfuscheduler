@@ -503,7 +503,7 @@ class Schedulers
 		return ret
 	end
 
-	def getSchedule(num_courses, num_schedules, prioritized)
+	def getSchedule(num_courses, num_schedules, prioritized) #returns an two dimensional array [course1, course2, course3, course4]
 		if num_courses > MAX_COURSES_PER_SCHEDULE or num_schedules > MAX_SCHEDULES_MADE or @num_courses == 0
 			return []
 		end
