@@ -185,10 +185,13 @@ class Course
 		@co_req = []
 		@pre_req = []
 		@dupes = name[0..8]
+		@locations  = []
 		if dates.length > 0
 			dates.each do |date|
 				@dates << date
+				@locations << date[-1]
 			end
+			@locations.uniq!	
 		end
 		if requisites.length > 0
 			requisites.each do |requisite|
@@ -231,6 +234,14 @@ class Course
 	def getCoReq
 		@co_req
 	end
+
+	def getLocations
+		ret = ''
+		@locations.length.times do |i|
+			ret = "#{@locations[i]} "
+		end
+		return ret
+	end 
 
 	# check if self has conflict location, time, or pre-requisite conflict with course
 	def checkConflict(course)
@@ -473,23 +484,23 @@ class Schedulers
 		@courses
 	end
 
-	def get1
-		@oneCourse
-	end
-	def get2
-		@twoCourses
-	end
-	def get3
-		@threeCourses
-	end
-	def get4
-		@fourCourses
-	end
-	def get5
-		@fiveCourses
-	end
-	def get6
-		@sixCourses
+
+	def getScheduleOf(number)
+		ret = []
+		if number == 1
+			ret = @oneCourse
+		elsif number == 2
+			ret = @twoCourses
+		elsif number == 3
+			ret = @threeCourses
+		elsif number == 4
+			ret = @fourCourses
+		elsif number == 5
+			ret = @fiveCourses
+		elsif number == 6
+			ret = @sixCourses
+		end
+		return ret
 	end
 
 	def getSchedule(num_courses, num_schedules, prioritized)
@@ -527,8 +538,13 @@ class Schedulers
 				cur_week.addCourse(tmp[i][1][j], tmp[i][1][j].getName[0..8])
 			end
 			num_courses.times do |j|
-				output += "#{tmp[i][1][j].getName}&#9;| "
+				output += "#{tmp[i][1][j].getName}&#9;"
+				output += "#{tmp[i][1][j].getLocations}&#9;| "
+				if j % 2 != 0 
+					output += '<br>'
+				end
 			end
+			
 			output += cur_week.printWeek
       output += "<p>"
 		end
@@ -597,30 +613,33 @@ class ScheduleBuildersController < ApplicationController
 ############################################################################################
 # makes the code works
       sched = Schedulers.new(@courseOut)
-			maxlength = 0
-			if sched.get6 != []
-				num_courses = 6
-				num_schedules = sched.get6.length
-			elsif sched.get5 != []
-				num_courses = 5
-				num_schedules = sched.get5.length
-			elsif sched.get4 != []
-				num_courses = 4
-				num_schedules = sched.get4.length
-			elsif sched.get3 != []
-				num_courses = 3
-				num_schedules = sched.get3.length
-			elsif sched.get2 != []
-				num_courses = 2
-				num_schedules = sched.get2.length
-			else
-				num_courses = 1
-				num_schedules = sched.get1.length
-			end
+      @output = ''
+  		userIn = 6	# where user choose # of courses/schedule should go
+  		looking = true
+  		val = false
+  		while looking 
+  			if sched.getScheduleOf(userIn) != []
+  				@output += "SCHEUDLE OF #{userIn} COURSE(S) FOUND"
+  				num_courses = userIn
+  				num_schedules = sched.getScheduleOf(num_courses).length
+  				looking = false
+  				val = true
+  			else
+  				userIn -= 1
+  				@output += "SCHEUDLE OF #{userIn+1} COURSE(S) DOES NOT EXISTS...LOOKING FOR SCHEDULE OF #{userIn} COURSE(S)..."
+  				@output += "<br>" 
+  				if userIn == 0
+  					looking = false
+  					@output += "FAILED BECAUSE INVALID COURSE(S)"
+  				end
+  			end
+  		end
       
-	  #@debug = [sched.get6, sched.get5, sched.get4, sched.get3, sched.get2, sched.get1,]
-	  #@goingout = num_courses
-	  @output = sched.printSchedule(num_courses, num_schedules)
+	  	#@debug = [sched.get6, sched.get5, sched.get4, sched.get3, sched.get2, sched.get1,]
+	  	#@goingout = num_courses
+		if val
+	  		@output += sched.printSchedule(num_courses, num_schedules)
+		end
     #there's a one to one coorespondance between the arrays
     #@names[1] will map to @times[1] so you can itterate through both and have them match.
   end
