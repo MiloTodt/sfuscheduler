@@ -132,8 +132,8 @@ def load_course_info(department, course_number, section)
     
   end
     #To generate the courselist with schedules
-        if(course_desc['info']['type']  != 'n' && schedule_string != "" ) then File.open("output.txt", 'a') {|f| f.write(course_desc['info']['dept'] + " "+ course_desc['info']['number'] + " " + course_desc['info']['section'] + "%" + schedule_string + "\n") }
-    end
+    #     if(course_desc['info']['type']  != 'n' && schedule_string != "" ) then File.open("output.txt", 'a') {|f| f.write(course_desc['info']['dept'] + " "+ course_desc['info']['number'] + " " + course_desc['info']['section'] + "%" + schedule_string + "\n") }
+    # end
 
 
   course_parsed[:schedule] = schedule_string
