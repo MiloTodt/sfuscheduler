@@ -112,7 +112,7 @@
 
         var newClass = document.getElementById('tbox').value;
         
-        if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum <= 6) {
+        if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum < 6) {
             classes.unshift(newClass);
             showList();
             classNum++;

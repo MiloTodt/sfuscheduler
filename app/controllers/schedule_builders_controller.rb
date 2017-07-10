@@ -209,7 +209,12 @@ class Course
 	end
 
 	def ==(course)
-		if @name[0..8] == course.getName[0..8] # for section number 
+		i = 0
+		course_number = 4	# include space after course major
+		while @name[i].match(/^[[:alpha:]]$/)
+			i += 1
+		end 
+		if @name[0..i+4] == course.getName[0..i+4] # for section number 
 			return true
 		end
 		return false
