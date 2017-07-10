@@ -22,9 +22,8 @@
                 <button type="button" class="btn btn-primary btn-lg" onclick="addClass()">ADD</button> 
                 <button type="button" class="btn btn-danger btn-lg" onclick="removeClass()">REMOVE</button>
                 <button type="button" class="btn btn-success btn-lg btn-block" onclick="createSchedule()">CREATE SCHEDULES</button>
-            </div>
-            <div class="col-xs-1">
-                <select class="dropdown" id='courseNum'>
+                           <select class="dropdown" id='courseNum'>
+                <option value="6">Desired Number of Classes to take</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -32,6 +31,9 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
+            </div>
+            <div class="col-xs-1">
+     
             </div>
         </div>
     </div>
@@ -72,7 +74,7 @@
     
     <!-- Add/Remove will only accept text of the form ex. CMPT 320/IAT 100 -->
     
-    var reggie = /([A-Z]{4}|[A-Z]{3}|[A-Z]{2})(\s{1})([0-9]{3})([A-Z]?)/;
+    var reggie = /([A-Z]{4}|[A-Z]{3})(\s{1})([0-9]{3})([A-Z]?)/;
     
   
     function clearBox() {
@@ -112,7 +114,7 @@
 
         var newClass = document.getElementById('tbox').value;
         
-        if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum < 6) {
+        if (reggie.test(newClass) && classes.indexOf(newClass) == -1 && classNum <= 6) {
             classes.unshift(newClass);
             showList();
             classNum++;
