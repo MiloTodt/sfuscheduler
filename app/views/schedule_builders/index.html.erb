@@ -1,7 +1,9 @@
 <%= stylesheet_link_tag "application", media: "all" %>
 
 <div class="header">
-    <h1> SFU COURSE SCHEDULER</h1>
+   <img align= "right" src="http://www.langleytoday.ca/wp-content/uploads/2016/04/SFU-logo-199x223.jpg"></img></h3>
+    <h3> SFU COURSE SCHEDULER <h3>
+ 
 </div>
 
 
@@ -21,7 +23,9 @@
             <div class="col-xs-4">
                 <button type="button" class="btn btn-primary btn-lg" onclick="addClass()">ADD</button> 
                 <button type="button" class="btn btn-danger btn-lg" onclick="removeClass()">REMOVE</button>
-                                        <select class="dropdown" id='courseNum'>
+
+                <button type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
+                                                        <select class="dropdown" id='courseNum'>
                 <option value="6"># of Classes to take</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -30,7 +34,6 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-                <button type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
    
             </div>
             <div class="col-xs-1">
