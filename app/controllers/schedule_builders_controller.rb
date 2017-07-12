@@ -40,7 +40,22 @@ END_TIMES = {"920" => 0, "1020" => 1, "1120" => 2, "1220"=>3, "1320"=>4,
 "1450"=>6, "1550"=>7, "1650"=>8, "1750"=>9, "1850"=>10, "1950"=>11, 
 "2050"=>12, "2150"=>12}
 
-DEFAULT_SYM = '********'
+DEFAULT_SYM = ''
+
+
+# @param [String] time - pass time in a string with just digits (e.g. "830" or "1300")
+# @return [String] - returns time in format that is easy to deal with using CSS, and enforce 12hours format
+# Examples:
+# Pass "830", return "<span class='hours>8</span><span class='minutes'>30</span>"
+# Pass "1300", return "<span class='hours>1</span><span class='minutes'>00</span>"
+def parse_time_to_html(time)
+	minutes = time.last(2)
+	hours = time.first(time.length - 2).to_i
+
+	hours -= 12 if hours > 12
+
+	"<span class='hours'>#{hours}</span><span class='minutes'>#{minutes}</span>"
+end
 
 #=====================================================================
 # Day Class
@@ -135,40 +150,34 @@ class Week
 
 # for debug purposes
 	def printWeek()
-		breakline = '+=======+=========+=========+=========+=========+=========+=========+=========+'
-    	breathe = "       "
-    	output = "<pre>"
-    	output += breakline
-		output += "<br>|TIMES&#9;|"
-		WEEK.length.times do |day|
-			if @days[day].getName().length == 2
-				output += "#{@days[day].getName()}#{breathe}|"
-			else
-				output += "#{@days[day].getName()}#{breathe} |"
-			end
+		output = "<table class='schedule-table'>"
+		output += "<tr class='table-header'><td></td>"
+
+		days_of_week = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
+
+		days_of_week.each do |day|
+			output += "<td>#{day}</td>"
 		end
-		output += '<br>'
-		output += breakline
-		output += '<br>'
+
 		HOURS.length.times do |hour|
 			cur_hour = HOURS[hour]
-			output += "|#{cur_hour}&#9;|"			
+			output += "<tr>"
+			output += "<td class='table-time'>#{parse_time_to_html cur_hour}</td>"
 			#if cur_hour == "830" or cur_hour == "930"
 			#	output += ""
 			#end
 			WEEK.length.times do |day|
 				cur_day = @days[day]
 				if cur_day.getHour(cur_hour).length == 8
-					output+= "#{cur_day.getHour(cur_hour)} |"
+					output+= "<td>#{cur_day.getHour(cur_hour)}</td>"
 				else
-					output+= "#{cur_day.getHour(cur_hour)}|"
+					output+= "<td>#{cur_day.getHour(cur_hour)}</td>"
 				end
 			end
-			output += '<br>'
+			output += "</tr>"
 		end
-		output += breakline
-    output += "</pre>"
-      return output
+    output += "</table>"
+		return output
 	end
 end
 
@@ -555,7 +564,7 @@ class Schedulers
       output += "<p>"
 		end
     return output
-	end 
+	end
 end
 
 #=================================================================
