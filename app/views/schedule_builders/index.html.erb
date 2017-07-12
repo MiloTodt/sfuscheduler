@@ -21,11 +21,11 @@
                 <input class="form-control input-lg" type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> 
             </div>
             <div class="col-xs-4">
-                <button type="button" class="btn btn-primary btn-lg" onclick="addClass()">ADD</button> 
+                <button style="margin-right: 5px" type="button" class="btn btn-primary btn-lg" onclick="addClass()">ADD</button> 
                 <button type="button" class="btn btn-danger btn-lg" onclick="removeClass()">REMOVE</button>
 
-                <button type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
-                                                        <select class="dropdown" id='courseNum'>
+                <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
+                                                        <select style="margin-top: 10px" class="dropdown" id='courseNum'>
                 <option value="6"># of Classes to take</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -43,16 +43,16 @@
     </div>
 
 
-
-    <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
-        <p class="display" id="classBox0" name="class0"></p>
-        <p class="display" id="classBox1" name="class1"></p>
-        <p class="display" id="classBox2" name="class2"></p>
-        <p class="display" id="classBox3" name="class3"></p>
-        <p class="display" id="classBox4" name="class4"></p>
-        <p class="display" id="classBox5" name="class5"></p>
-    </form>
-
+    <div class="col-xs-6" style="margin-top: -50px">
+        <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
+            <p class="display" id="classBox0" name="class0"></p> 
+            <p class="display" id="classBox1" name="class1"></p>
+            <p class="display" id="classBox2" name="class2"></p>
+            <p class="display" id="classBox3" name="class3"></p>
+            <p class="display" id="classBox4" name="class4"></p>
+            <p class="display" id="classBox5" name="class5"></p>
+        </form>
+    </div>
 
     
 
@@ -83,8 +83,8 @@
   
     function clearBox() {
         for (a=0; a <= 5; a++) {
-                classes[a] = "___________";
-                document.getElementById('classBox'+a).innerHTML = "___________";
+                classes[a] = "";
+                document.getElementById('classBox'+a).innerHTML = "";
             }
     }
 
