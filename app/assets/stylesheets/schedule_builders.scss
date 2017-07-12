@@ -52,3 +52,73 @@ li {
     padding: 10px;
     line-height: 110%;
 }
+
+.schedule-table {
+  border-collapse: collapse;
+
+  td {
+    border: 1px solid rgba(113, 113, 113, 0.45);
+  }
+
+  .table-header {
+    td {
+      border-top: 0;
+    }
+
+    td:not(:first-child) {
+      background-color: rgba(100, 149, 237, 0.56);
+      min-width: 100px;
+      height: 30px;
+    }
+  }
+
+  tr:last-child {
+    td {
+      border-bottom: 0;
+    }
+  }
+
+  tr {
+    td:first-child {
+      border-left: 0;
+    }
+
+    td:last-child {
+      border-right: 0;
+    }
+  }
+
+  .table-time {
+    min-width: 60px;
+    height: 40px;
+
+    $from: rgba(255, 255, 0, 0);
+    $to: rgba(255, 255, 0, 0.71);
+
+    background: $to; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, $from , $to); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $from, $to); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $from, $to); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $from , $to); /* Standard syntax */
+
+    position: relative;
+
+    .hours {
+      position: absolute;
+      top: 3px;
+      right: 20px;
+      font-size: 1.6rem;
+    }
+
+    .minutes {
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      font-size: 0.9rem;
+    }
+  }
+
+  td {
+    text-align: center;
+  }
+}
