@@ -140,7 +140,10 @@
     }
 
     function createSchedule() {
-      document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classes.join(',') + '"></form>';
+      var classesOut = classes.splice(0, classNum).join(',');
+
+      document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
+
       document.getElementById("dynForm").submit();
     }
 
