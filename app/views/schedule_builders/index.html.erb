@@ -140,17 +140,8 @@
     }
 
     function createSchedule() {
-      var classesOut = "";
-    var method =  "post";
-    for(var i = 0; i < classNum; i++){
-      classesOut += classes[i];
-       if (i != classNum) {classesOut += ","};
-      
-    }
-
-document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
-
-document.getElementById("dynForm").submit();
+      document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classes.join(',') + '"></form>';
+      document.getElementById("dynForm").submit();
     }
 
     window.onload = clearBox;
