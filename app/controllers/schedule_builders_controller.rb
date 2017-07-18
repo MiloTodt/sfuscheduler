@@ -643,7 +643,7 @@ class ScheduleBuildersController < ApplicationController
   				val = true
   			else
   				userIn -= 1
-  				@output += "SCHEUDLE OF #{userIn+1} COURSE(S) DOES NOT EXISTS...LOOKING FOR SCHEDULE OF #{userIn} COURSE(S)..."
+  				@output += "SCHEDULE OF #{userIn+1} COURSE(S) DOES NOT EXISTS...LOOKING FOR SCHEDULE OF #{userIn} COURSE(S)..."
   				@output += "<br>" 
   				if userIn == 0
   					looking = false
