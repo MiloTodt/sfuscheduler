@@ -16,18 +16,22 @@
 <div class="select">
 
     <div class="container">
+       
         <div class="row">
             <div class="col-xs-4">
-                <input class="form-control input-lg" type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add/Remove Class Here"> 
+                <input class="form-control input-lg" type="text" list="classes" id="tbox" autocomplete="on" placeholder="Add Class Here"> 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-2">
                 <button style="margin-right: 5px" type="button" class="btn btn-primary btn-lg" onclick="addClass()">ADD</button> 
-                <button type="button" class="btn btn-danger btn-lg" onclick="removeClass()">REMOVE</button>
-
-                <button style="margin-top: 10px" type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
-                <button style="margin-top: 10px; opacity: 0" type="button" class="btn btn-info btn-lg" onclick="showLastSchedule()" id="show-last-classes-btn">SHOW LAST SCHEDULE</button>
-                                                        <select style="margin-top: 10px" class="dropdown" id='courseNum'>
-                <option value="6"># of Classes to take</option>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px">
+            <div class="col-xs-3">
+                <button type="button" class="btn btn-success btn-lg" onclick="createSchedule()">CREATE SCHEDULES</button>
+            </div>
+            <div class="col-xs-1">
+             <select style="margin-top: 10px" class="dropdown-menu" id='courseNum'>
+                <option value="6"># of Classes</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -35,27 +39,39 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-   
             </div>
-            <div class="col-xs-1">
-     
+            
+        </div>
+        <div class="row" style="margin-top: 10px">   
+            <div class="col-xs-2">
+                <button style=" opacity: 0" type="button" class="btn btn-info btn-lg" onclick="showLastSchedule()" id="show-last-classes-btn">SHOW LAST SCHEDULE</button>
             </div>
         </div>
+            
+        <div class="row" style="margin-top: 10px">
+            <div class="col-xs-4">
+                <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
+                    <p class="display" id="classBox0" name="class0"></p> 
+                    <p class="display" id="classBox1" name="class1"></p>
+                    <p class="display" id="classBox2" name="class2"></p>
+                    <p class="display" id="classBox3" name="class3"></p>
+                    <p class="display" id="classBox4" name="class4"></p>
+                    <p class="display" id="classBox5" name="class5"></p>
+                </form>
+            </div>
+
+            <div class="col-xs-2">
+            <p class="rbutton"> <button type="button" class="btn btn-danger btn-lg" onclick="removeClass(0)">x</button></p>
+            <p class="rbutton"><button type="button" class="btn btn-danger btn-lg" onclick="removeClass(1)">x</button></p>
+            <p class="rbutton"><button type="button" class="btn btn-danger btn-lg" onclick="removeClass(2)">x</button></p>
+            <p class="rbutton"><button type="button" class="btn btn-danger btn-lg" onclick="removeClass(3)">x</button></p>
+            <p class="rbutton"><button type="button" class="btn btn-danger btn-lg" onclick="removeClass(4)">x</button></p>
+            <p class="rbutton"><button type="button" class="btn btn-danger btn-lg" onclick="removeClass(5)">x</button></p>
+            </div>
+        </div>
+
     </div>
 
-
-    <div class="col-xs-6" style="margin-top: -95px">
-        <form accept-charset="UTF-8" action="/schedule_builders#new.html" method="post">
-            <p class="display" id="classBox0" name="class0"></p> 
-            <p class="display" id="classBox1" name="class1"></p>
-            <p class="display" id="classBox2" name="class2"></p>
-            <p class="display" id="classBox3" name="class3"></p>
-            <p class="display" id="classBox4" name="class4"></p>
-            <p class="display" id="classBox5" name="class5"></p>
-        </form>
-    </div>
-
-    
 
 </div>
 
@@ -63,8 +79,9 @@
     <ul>
         <li>To add a class to the list enter the course code in the text box and click the add button</li>
         <li>Repeat above for up to 6 classes</li>
-        <li>To remove a class from the list enter the course code in the text box and click remove</li>
+        <li>To remove a class from the list click the red x beside it</li>
         <li>Click Create Schedules to generate possible schedules</li>
+        <li>Click Show Last Schedule to display the last set of generated schedules</li>
     </ul>
 </div>
 
@@ -133,16 +150,14 @@
     
     <!-- Remove class from array classes and update display on page -->
     
-    function removeClass() {
+    function removeClass(i) {
 
-        var newClass = document.getElementById('tbox').value;
+        var classNum = i;
 
-        if (reggie.test(newClass) && classes.indexOf(newClass) != -1) {
-            var classToRemove = classes.indexOf(newClass);
-            classes.splice(classes.indexOf(newClass), 1);
-            showList();
-            classNum--;
-        }
+        classes.splice(classNum, 1);
+        showList();
+        classNum--;
+        
     }
 
     function createSchedule() {

@@ -18,7 +18,7 @@
 .select {
   width: 40%;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 60px;
   float: left;
   
 }
@@ -26,7 +26,7 @@
 .info {
   width: 40%;
   padding: 10px;
-  float: right;
+  float: left;
 }
 
 .footer {
@@ -41,9 +41,15 @@
 .display {
   border: 1px solid black;
   padding: 30px;
+  align-content: center;
   font-size: 25px;
   font-style: oblique;
   text-align: center;
+  height: 75px;
+}
+
+.rbutton {
+  align-content: center;
   height: 75px;
 }
 
