@@ -2,6 +2,9 @@
 
 <h1>Your Schedule</h1>
 
+<button style=" opacity: 0" type="button" class="btn btn-info btn-lg" onclick="saveSchedule('<%= @classes_list %>')" id="save-classes-btn">SAVE SCHEDULE</button>
+<br>
+
 <%= render 'form' %>
 
     <%=@output.html_safe%>
@@ -11,3 +14,39 @@
 <%= link_to 'Back', schedule_builders_path %>
 
 <%=@data%>
+
+<script type="text/javascript" charset="utf-8">
+  var saveClassesBtn = document.getElementById('save-classes-btn');
+
+  // if local storage is supported — show "save classes" button
+  if (isLocalStorage()) {
+      saveClassesBtn.style.opacity = 1;
+  }
+
+  function saveSchedule(classesList) {
+      if (isLocalStorage()) {
+          window.localStorage.setItem('savedClasses', classesList); // save the schedule so it can be retrieved later
+
+          saveClassesBtn.textContent = "SAVED"; // set button's text to "SAVED" as a feedback
+          saveClassesBtn.style.pointerEvents = "none"; // remove pointers event like changing color on hovering, because clicking the button has no effect now
+      }
+  }
+
+  // returns true if localStorage is supported, false otherwise
+  function isLocalStorage() {
+      if (window.localStorage) {
+          var test = "__localstoragetest__";
+
+          try {
+              window.localStorage.setItem(test, test);
+              window.localStorage.removeItem(test);
+          } catch (ex) {
+              return false;
+          }
+
+          return true;
+      }
+
+      return false;
+  }
+</script>

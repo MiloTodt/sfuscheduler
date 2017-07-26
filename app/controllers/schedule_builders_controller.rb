@@ -590,7 +590,8 @@ class ScheduleBuildersController < ApplicationController
     @schedule_builder = ScheduleBuilder.new(schedule_builder_params)
 
 
-    @classes = [params[:classes].split(",")]
+		@classes_list = params[:classes]
+    @classes = [@classes_list.split(",")]
     @classes.flatten!
 
     times = File.readlines('coursetimes.txt') #currently loading from a txt file instead of the database for ease of coding

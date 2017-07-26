@@ -44,7 +44,7 @@
         </div>
         <div class="row" style="margin-top: 10px">   
             <div class="col-xs-2">
-                <button style=" opacity: 0" type="button" class="btn btn-info btn-lg" onclick="showLastSchedule()" id="show-last-classes-btn">SHOW LAST SCHEDULE</button>
+                <button style=" opacity: 0" type="button" class="btn btn-info btn-lg" onclick="showSavedSchedule()" id="show-saved-classes-btn">SHOW SAVED SCHEDULE</button>
             </div>
         </div>
             
@@ -99,9 +99,9 @@
     var reggie = /([A-Z]{4}|[A-Z]{3}|[A-Z]{2})(\s{1})([0-9]{3})([A-Z]?)/;
     
 
-    // if localStorage is supported and if user has his last schedule saved, then show the 'show last schedule' button
-    if (isLocalStorage() && window.localStorage.getItem('lastClasses')) {
-        document.getElementById('show-last-classes-btn').style.opacity = 1;
+    // if localStorage is supported and if user has his last schedule saved, then show the 'show saved schedule' button
+    if (isLocalStorage() && window.localStorage.getItem('savedClasses')) {
+        document.getElementById('show-saved-classes-btn').style.opacity = 1;
     }
 
     function clearBox() {
@@ -163,20 +163,17 @@
     function createSchedule() {
       var classesOut = classes.splice(0, classNum).join(',');
 
-      if (isLocalStorage()) {
-        window.localStorage.setItem('lastClasses', classesOut); // save the schedule so it can be retrieved later
-      }
 
       document.body.innerHTML += '<form id="dynForm" action ="/schedule_builders/new" method="get"><input type="hidden" name="classes" value="' + classesOut + '"></form>';
 
       document.getElementById("dynForm").submit();
     }
 
-    function showLastSchedule() {
-      var lastClasses = window.localStorage.getItem('lastClasses').split(',');
+    function showSavedSchedule() {
+      var savedClasses = window.localStorage.getItem('savedClasses').split(',');
 
-      classes = lastClasses;
-      classNum = lastClasses.length;
+      classes = savedClasses;
+      classNum = savedClasses.length;
 
       createSchedule();
     }
